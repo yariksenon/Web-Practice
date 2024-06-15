@@ -60,7 +60,7 @@ document.querySelectorAll('form').forEach(form => {
     // Если все данные введены корректно, перенаправляем на страницу 'index.html',
     // иначе выводим сообщение об ошибках через alert()
     if (valid) {
-      window.location.href = '../Main.html';
+      window.location.href = 'Main.html';
     } else {
       alert(errorMessage);
     }
