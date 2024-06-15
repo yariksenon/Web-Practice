@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link
+      rel="shortcut icon"
+      href="https://static.tildacdn.com/tild3466-3865-4563-b537-346538393563/favicon.ico"
+      type="image/x-icon"
+  >
+    <script src="javascripts/jquery-1.9.1.js"></script>
+    <script src="javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+    <style>
+      /* Импортируем шрифт Montserrat из Google Fonts */
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+      /* Применяем box-sizing: border-box ко всем элементам, чтобы padding и border включались в размеры элементов */
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Настраиваем стили для тела документа */
+      body {
+        font-family: "Montserrat", sans-serif; /* Применяем шрифт Montserrat ко всему тексту */
+        background: #f6f5f7; /* Задаем светло-серый фон */
+        display: flex; /* Используем flexbox для выравнивания содержимого */
+        flex-direction: column; /* Располагаем элементы вертикально */
+        justify-content: center; /* Выравниваем содержимое по центру вертикально */
+        align-items: center; /* Выравниваем содержимое по центру горизонтально */
+        height: 100vh; /* Высота тела документа на весь экран */
+        margin: 0; /* Убираем отступы */
+      }
+
+      /* Стили для заголовков первого уровня */
+      h1 {
+        font-weight: bold; /* Жирный шрифт */
+        margin: 0; /* Убираем внешние отступы */
+      }
+
+      /* Стили для абзацев */
+      p {
+        font-size: 14px; /* Размер шрифта */
+        font-weight: 100; /* Легкий шрифт */
+        line-height: 20px; /* Межстрочный интервал */
+        letter-spacing: 0.5px; /* Межбуквенный интервал */
+        margin: 20px 0 30px; /* Внешние отступы сверху и снизу */
+      }
+
+      /* Стили для элементов span */
+      span {
+        font-size: 12px; /* Размер шрифта */
+      }
+
+      /* Стили для ссылок */
+      a {
+        color: #333; /* Цвет текста */
+        font-size: 14px; /* Размер шрифта */
+        text-decoration: none; /* Убираем подчеркивание */
+        margin: 15px 0; /* Внешние отступы сверху и снизу */
+      }
+
+      /* Стили для контейнера */
+      .container {
+        background: #fff; /* Белый фон */
+        border-radius: 10px; /* Скругленные углы */
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22); /* Тени */
+        position: relative; /* Относительное позиционирование */
+        overflow: hidden; /* Обрезаем содержимое, выходящее за границы */
+        width: 768px; /* Ширина контейнера */
+        max-width: 100%; /* Максимальная ширина */
+        min-height: 480px; /* Минимальная высота */
+      }
+
+      /* Стили для форм внутри контейнера */
+      .form-container form {
+        background: #fff; /* Белый фон */
+        display: flex; /* Flexbox */
+        flex-direction: column; /* Вертикальное расположение элементов */
+        padding: 0 50px; /* Внутренние отступы слева и справа */
+        height: 100%; /* Высота на весь контейнер */
+        justify-content: center; /* Выравнивание по центру вертикально */
+        align-items: center; /* Выравнивание по центру горизонтально */
+        text-align: center; /* Текст по центру */
+      }
+
+      /* Стили для контейнера социальных ссылок */
+      .social-container {
+        margin: 20px 0; /* Внешние отступы сверху и снизу */
+      }
+
+      /* Стили для социальных ссылок */
+      .social-container a {
+        border: 1px solid #ddd; /* Граница */
+        border-radius: 50%; /* Круглая форма */
+        display: inline-flex; /* Inline flexbox */
+        justify-content: center; /* Выравнивание по центру горизонтально */
+        align-items: center; /* Выравнивание по центру вертикально */
+        margin: 0 5px; /* Внешние отступы слева и справа */
+        height: 40px; /* Высота */
+        width: 40px; /* Ширина */
+      }
+
+      /* Стили для полей ввода */
+      .form-container input {
+        background: #eee; /* Светло-серый фон */
+        border: none; /* Убираем границу */
+        padding: 12px 15px; /* Внутренние отступы */
+        margin: 8px 0; /* Внешние отступы сверху и снизу */
+        width: 100%; /* Ширина на весь контейнер */
+      }
+
+      /* Стили для кнопок */
+      button {
+        border-radius: 20px; /* Скругленные углы */
+        border: 1px solid teal; /* Бирюзовая граница */
+        background: teal; /* Бирюзовый фон */
+        color: #fff; /* Белый цвет текста */
+        font-size: 12px; /* Размер шрифта */
+        font-weight: bold; /* Жирный шрифт */
+        padding: 12px 45px; /* Внутренние отступы */
+        letter-spacing: 1px; /* Межбуквенный интервал */
+        text-transform: uppercase; /* Текст заглавными буквами */
+        transition: transform 80ms ease-in; /* Плавная анимация при трансформации */
+      }
+
+      /* Эффект при нажатии на кнопку */
+      button:active {
+        transform: scale(0.95); /* Уменьшение кнопки */
+      }
+
+      /* Убираем обводку при фокусе на кнопке */
+      button:focus {
+        outline: none;
+      }
+
+      /* Стили для кнопки-призрака (прозрачной) */
+      button.ghost {
+        background: transparent; /* Прозрачный фон */
+        border-color: #fff; /* Белая граница */
+      }
+
+      /* Общие стили для контейнеров форм */
+      .form-container {
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Привязка к верхней границе */
+        height: 100%; /* Высота на весь контейнер */
+        transition: all 0.6s ease-in-out; /* Плавный переход */
+      }
+
+      /* Стили для контейнера входа */
+      .sign-in-container {
+        left: 0; /* Привязка к левой границе */
+        width: 50%; /* Ширина 50% от родительского контейнера */
+        z-index: 2; /* Приоритет отображения */
+      }
+
+      /* Стили для контейнера регистрации */
+      .sign-up-container {
+        left: 0; /* Привязка к левой границе */
+        width: 50%; /* Ширина 50% от родительского контейнера */
+        z-index: 1; /* Приоритет отображения ниже, чем у sign-in-container */
+        opacity: 0; /* Прозрачность */
+      }
+
+      /* Стили для контейнера с overlay */
+      .overlay-container {
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Привязка к верхней границе */
+        left: 50%; /* Привязка к середине по горизонтали */
+        width: 50%; /* Ширина 50% от родительского контейнера */
+        height: 100%; /* Высота на весь контейнер */
+        overflow: hidden; /* Обрезаем содержимое, выходящее за границы */
+        transition: transform 0.6s ease-in-out; /* Плавный переход */
+        z-index: 100; /* Высокий приоритет отображения */
+      }
+
+      /* Стили для overlay */
+      .overlay {
+        background: linear-gradient(to right, #b89683, rgb(0, 128, 128))
+          no-repeat 0 0 / cover; /* Градиентный фон */
+        color: #fff; /* Белый цвет текста */
+        position: relative; /* Относительное позиционирование */
+        left: -100%; /* Смещение влево */
+        height: 100%; /* Высота на весь контейнер */
+        width: 200%; /* Ширина в два раза больше контейнера */
+        transform: translateY(0); /* Без смещения по вертикали */
+        transition: transform 0.6s ease-in-out; /* Плавный переход */
+      }
+
+      /* Стили для панели overlay */
+      .overlay-panel {
+        position: absolute; /* Абсолютное позиционирование */
+        top: 0; /* Привязка к верхней границе */
+        display: flex; /* Flexbox */
+        flex-direction: column; /* Вертикальное расположение элементов */
+        justify-content: center; /* Выравнивание по центру вертикально */
+        align-items: center; /* Выравнивание по центру горизонтально */
+        padding: 0 40px; /* Внутренние отступы слева и справа */
+        height: 100%; /* Высота на весь контейнер */
+        width: 50%; /* Ширина 50% от родительского контейнера */
+        text-align: center; /* Текст по центру */
+        transform: translateY(0); /* Без смещения по вертикали */
+        transition: transform 0.6s ease-in-out; /* Плавный переход */
+      }
+
+      /* Стили для правой панели overlay */
+      .overlay-right {
+        right: 0; /* Привязка к правой границе */
+        transform: translateY(0); /* Без смещения по вертикали */
+      }
+
+      /* Стили для левой панели overlay */
+      .overlay-left {
+        transform: translateY(-20%); /* Смещение вверх на 20% */
+      }
+
+      /* Перемещение контейнера входа вправо при активной панели */
+      .container.right-panel-active .sign-in-container {
+        transform: translateY(100%);
+      }
+
+      /* Перемещение overlay контейнера влево при активной панели */
+      .container.right-panel-active .overlay-container {
+        transform: translateX(-100%);
+      }
+
+      /* Перемещение контейнера регистрации над контейнером входа */
+      .container.right-panel-active .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1; /* Восстановление непрозрачности */
+        z-index: 5; /* Высокий приоритет отображения */
+      }
+
+      /* Перемещение overlay вправо при активной панели */
+      .container.right-panel-active .overlay {
+        transform: translateX(50%);
+      }
+
+      /* Восстановление текста к центру */
+      .container.right-panel-active .overlay-left {
+        transform: translateY(0);
+      }
+
+      /* Такое же действие для правой панели */
+      .container.right-panel-active .overlay-right {
+        transform: translateY(20%);
+      }
+
+      /* Стили для футера */
+      .footer {
+        margin-top: 25px; /* Внешний отступ сверху */
+        text-align: center; /* Текст по центру */
+      }
+
+      /* Стили для иконок */
+      .icons {
+        display: flex; /* Flexbox */
+        width: 30px; /* Ширина */
+        height: 30px; /* Высота */
+        letter-spacing: 15px; /* Межбуквенный интервал */
+        align-items: center; /* Выравнивание по центру вертикально */
+      }
+      @media (max-width: 800px){
+        .overlay-panel{
+          padding: 0;
+        }
+        .form-container form{
+          padding: 0 15px;
+        }
+      }
+      @media (max-width: 600px){
+        h1{
+          font-size: 25px;
+        }
+        p{
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Подключение стилей иконок Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    >
+
+    <!-- Основной контейнер для форм -->
+    <div class="container" id="container">
+      <!-- Форма регистрации -->
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Регистрация</h1>
+          <!-- Социальные кнопки -->
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Текст под формой -->
+          <span>или используйте свой E-mail для регистрации</span>
+          <!-- Поля ввода -->
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <!-- Кнопка регистрации -->
+          <button>Зарегистрироваться</button>
+        </form>
+      </div>
+      <!-- Форма авторизации -->
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Авторизация</h1>
+          <!-- Социальные кнопки -->
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <!-- Текст под формой -->
+          <span>или используйте свой аккаунт</span>
+          <!-- Поля ввода -->
+          <input type="email" placeholder="Email">
+          <input type="password" placeholder="Password">
+          <!-- Ссылка на восстановление пароля -->
+          <a href="#">Забыли пароль?</a>
+          <!-- Кнопка входа -->
+          <button>Вход</button>
+        </form>
+      </div>
+      <!-- Контейнер с overlay для анимации -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <!-- Левая панель overlay -->
+          <div class="overlay-panel overlay-left">
+            <h1>Добро пожаловать!</h1>
+            <p>
+              Чтобы оставаться на связи с нами, пожалуйста, войдите в систему с
+              вашей личной информацией
+            </p>
+            <!-- Кнопка для переключения на форму авторизации -->
+            <button class="ghost" id="signIn">Авторизация</button>
+          </div>
+          <!-- Правая панель overlay -->
+          <div class="overlay-panel overlay-right">
+            <h1>Привет, Друг!</h1>
+            <p>
+              Введите свои личные данные и начните путешествие вместе с нами
+            </p>
+            <!-- Кнопка для переключения на форму регистрации -->
+            <button class="ghost" id="signUp">Регистрация</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Подключение скрипта для валидации форм -->
+    <script src="Script/Validation_10.js"></script>
+  </body>
+</html>

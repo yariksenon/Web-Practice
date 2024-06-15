@@ -1,0 +1,902 @@
+/* Стили для скрытия элементов с определенными классами */
+.dis_eigh_on {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+.hmedia {
+  display: none;
+}
+.disp_non {
+  display: none;
+}
+.img_none {
+  display: none;
+}
+.h_media {
+  display: none;
+}
+.br_disp {
+  display: none;
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 1400px */
+@media (max-width: 1400px) {
+  /* Скрытие элемента с классом .call */
+  .call {
+    display: none;
+  }
+
+  /* Изменение стилей для элемента с классом .btn_first */
+  .btn_first {
+    justify-content: space-around;
+  }
+
+  /* Изменение стилей для элемента с id #take */
+  #take {
+    border: none;
+  }
+
+  /* Отображение элементов с классом .br_disp в виде flex-контейнера */
+  .br_disp {
+    display: flex;
+  }
+
+  /* Изменение стилей для контейнера .container_hand_1 */
+  .container_hand_1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Изменение стилей для заголовков в .container_hand_1 и .container_hand_2 */
+  .container_hand_1 h2,
+  .container_hand_2 h2 {
+    text-align: center;
+  }
+
+  /* Изменение стилей для параграфов в .container_hand_1 и .container_hand_2 */
+  .container_hand_1 p,
+  .container_hand_2 p {
+    margin-top: 20px;
+    line-height: normal;
+    font-weight: 500;
+  }
+
+  /* Изменение стилей для контейнера .container_hand_2 */
+  .container_hand_2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Изменение стилей для сетки с классом .disp_gr */
+  .disp_gr {
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1% 30% 30% 30%;
+    margin-top: 30px;
+    column-gap: 0%;
+    row-gap: 15%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Скрытие элемента с классом .dis__none */
+  .dis__none {
+    display: none;
+  }
+
+  /* Изменение высоты для контейнера .container_selection */
+  .container_selection {
+    height: 333px;
+  }
+
+  /* Изменение ширины для элемента с классом .cont_faq */
+  .cont_faq {
+    width: 100%;
+  }
+
+  /* Изменение ширины для элемента с классом .buttns */
+  .buttns {
+    width: 100%;
+  }
+
+  /* Изменение стилей для элемента с классом .footer_right */
+  .footer_right {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Изменение отступа для изображения внутри элемента с классом .bottom */
+  .bottom img {
+    margin-top: 20px;
+  }
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 1300px */
+@media (max-width: 1300px) {
+  /* Изменения для контейнера .menu */
+  .menu {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Деление на две колонки */
+    grid-template-rows: 1fr 100%; /* Определение строк */
+  }
+
+  /* Изменения для элементов .menu_1, .menu_2, .menu_5, .menu_6 */
+  .menu_1,
+  .menu_2,
+  .menu_5,
+  .menu_6 {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Дополнительные изменения для .menu_5 и .menu_6 */
+  .menu_5,
+  .menu_6 {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+    justify-content: start; /* Выравнивание контента в начале */
+    text-align: center; /* Центрирование текста */
+  }
+
+  /* Скрытие элементов .menu_3, .menu_4, .menu_7, .menu_8 */
+  .menu_3,
+  .menu_4,
+  .menu_7,
+  .menu_8 {
+    display: none;
+  }
+
+  /* Изменения для контейнера .programm_footer */
+  .programm_footer {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+  }
+
+  /* Изменения для элемента .foot_left */
+  .foot_left {
+    margin-top: 30px;
+  }
+
+  /* Изменения для параграфов в .foot_left */
+  .foot_left p {
+    text-align: center; /* Центрирование текста */
+    margin-top: 10px;
+  }
+
+  /* Изменения для контейнера .foot_right */
+  .foot_right {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+  }
+
+  /* Изменения для изображений в .foot_right */
+  .foot_right img {
+    width: 15%; /* Установка ширины изображений */
+  }
+
+  /* Скрытие элемента .img_tel */
+  .img_tel {
+    display: none;
+  }
+
+  /* Стили для блока .freeConsultation */
+  .freeConsultation {
+    background-color: #a2be95; /* Цвет фона */
+    border-radius: 30px; /* Радиус скругления углов */
+    padding: 10px 30px 0 30px; /* Внутренний отступ */
+    margin-top: 8%; /* Отступ сверху */
+    display: flex; /* Отображение как флексбокс */
+    border: none; /* Удаление границы */
+    width: 100%; /* Ширина */
+    justify-content: center; /* Выравнивание контента по центру */
+    text-align: center; /* Центрирование текста */
+    height: 50vh; /* Высота */
+  }
+
+  /* Скрытие элемента .dadada */
+  .dadada {
+    display: none;
+  }
+
+  /* Изменения для элемента #name */
+  #name {
+    width: 100%; /* Ширина */
+    margin-right: 0px; /* Правый отступ */
+    padding-left: 15px; /* Левый внутренний отступ */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 600; /* Насыщенность шрифта */
+  }
+
+  /* Изменения для элемента #number */
+  #number {
+    margin: 15px 0 15px 0; /* Внешние отступы */
+    width: 100%; /* Ширина */
+    padding-left: 15px; /* Левый внутренний отступ */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 600; /* Насыщенность шрифта */
+  }
+
+  /* Изменения для кнопки в .container_freeConsultation */
+  .container_freeConsultation button {
+    width: 100%; /* Ширина */
+    margin: 0; /* Отступы */
+  }
+
+  /* Изменения для контейнера .stayInformed */
+  .stayInformed {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+    justify-content: center; /* Выравнивание контента по центру */
+    text-align: center; /* Центрирование текста */
+  }
+
+  /* Изменения для изображений в .dadadada */
+  .dadadada img {
+    width: 10%; /* Ширина изображений */
+  }
+
+  /* Изменения для контейнера .dadadada */
+  .dadadada {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+    justify-content: center; /* Выравнивание контента по центру */
+    align-items: center; /* Выравнивание элементов по центру */
+  }
+
+  /* Изменения для контейнера .stayInformed_right */
+  .stayInformed_right {
+    display: flex; /* Отображение как флексбокс */
+    align-items: center; /* Выравнивание элементов по центру */
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+  }
+
+  /* Изменения для инпута в .stayInformed_right */
+  .stayInformed_right input {
+    margin-top: 20px; /* Внешний отступ сверху */
+    width: 100%; /* Ширина */
+    margin-right: 0; /* Правый отступ */
+  }
+
+  /* Изменения для кнопки в .stayInformed_right */
+  .stayInformed_right button {
+    margin-top: 20px; /* Внешний отступ сверху */
+    width: 100%; /* Ширина */
+  }
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 1200px */
+@media (max-width: 1200px) {
+  /* Изменения для контейнера .buttns */
+  .buttns {
+    display: flex; /* Отображение как флексбокс */
+    flex-direction: column; /* Направление колонка */
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    align-items: center; /* Выравнивание по центру по горизонтали */
+    width: 100%; /* Ширина 100% */
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для кнопок .btns */
+  .btns {
+    width: 60%; /* Ширина 60% */
+    margin: 15px 0; /* Внешние отступы */
+  }
+
+  /* Изменения для кнопок в контейнере .cont_faq */
+  .cont_faq button {
+    font-size: 20px; /* Размер шрифта кнопок */
+  }
+
+  /* Изменения для контейнера .container_footer */
+  .container_footer {
+    display: flex; /* Отображение как флексбокс */
+    margin-top: 80px; /* Верхний отступ */
+    justify-content: space-between; /* Равномерное распределение элементов */
+    flex-direction: column; /* Направление колонка */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для элемента .disp_1 */
+  .disp_1 {
+    justify-content: space-around; /* Равномерное распределение элементов */
+  }
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 1100px */
+@media (max-width: 1100px) {
+  /* Изменения для элемента с id #carousel */
+  #carousel {
+    display: flex; /* Отображение как флексбокс */
+  }
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 1000px */
+@media (max-width: 1000px) {
+  /* Скрытие элементов с классом .link */
+  .link {
+    display: none;
+  }
+
+  .frst{
+    display: none;
+  }
+  /* Изменения для заголовка h1 в контейнере .about */
+  .about h2 {
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для контейнера .container_about */
+  .container_about {
+    margin-top: 50px; /* Верхний отступ */
+    display: grid; /* Отображение как сетка */
+    grid-template-columns: 1fr; /* Одна колонка */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    width: 100%; /* Ширина 100% */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; /* Определение строк */
+    gap: 40px; /* Расстояние между элементами */
+  }
+
+  /* Изменения для элемента .qq */
+  .qq {
+    display: flex; /* Отображение как флексбокс */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    text-align: center; /* Выравнивание текста по центру */
+    flex-direction: column; /* Направление колонка */
+  }
+
+  /* Скрытие элемента .taste */
+  .taste {
+    display: none;
+  }
+
+  /* Анимация и переходы для изображений в элементах .menu_1, .menu_2, .menu_3, .menu_4 */
+  .menu_1 img,
+  .menu_2 img,
+  .menu_3 img,
+  .menu_4 img {
+    transform: rotate(0deg); /* Начальное положение элемента */
+    transition: transform 0.3s ease; /* Плавный переход */
+  }
+
+  /* При наведении на изображение */
+  .menu_1 img:hover,
+  .menu_2 img:hover,
+  .menu_3 img:hover,
+  .menu_4 img:hover {
+    transform: rotate(360deg); /* Поворот на 360 градусов */
+  }
+
+  .light{
+    margin: 10px 0 10px 0;
+  }
+}
+
+/* Медиа-запрос для экранов с максимальной шириной до 800px */
+@media (max-width: 800px) {
+  /* Скрытие элемента .frirst_2 */
+  .frirst_2 {
+    display: none;
+  }
+
+  /* Скрытие элемента .link */
+  .link {
+    display: none;
+  }
+
+  /* Отображение элемента .hamburger в .second */
+  .second .hamburger {
+    display: flex;
+  }
+
+  /* Скрытие изображений в .container_food */
+  .container_food img {
+    display: none;
+  }
+
+  /* Изменения для кнопок .btn */
+  .btn {
+    width: 100%; /* Ширина 100% */
+    padding: 0; /* Удаление внутренних отступов */
+    display: flex; /* Отображение как флексбокс */
+    flex-direction: column; /* Направление колонка */
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    align-items: start; /* Выравнивание по началу по горизонтали */
+  }
+
+  /* Скрытие элемента .dsp_none */
+  .dsp_none {
+    display: none;
+  }
+
+  /* Отображение элемента .hmedia */
+  .hmedia {
+    display: flex; /* Отображение как флексбокс */
+    font-size: 28px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовка h1 в .btn */
+  .btn h1 {
+    text-align: left; /* Выравнивание текста по левому краю */
+    font-size: 28px; /* Размер шрифта */
+    font-weight: 900; /* Насыщенность шрифта */
+  }
+
+  /* Изменения для .container_selection */
+  .container_selection {
+    height: 433px; /* Высота */
+  }
+
+  /* Изменения для .calculate */
+  .calculate {
+    margin-top: 30px; /* Верхний отступ */
+    grid-column: span 3; /* Занимает три колонки в сетке */
+  }
+
+  /* Изменения для кнопок в .foot_left */
+  .foot_left button {
+    width: 500px; /* Ширина кнопок */
+  }
+
+  /* Скрытие элемента .thr */
+  .thr {
+    display: none;
+  }
+
+  /* Изменения для заголовка h2 в .FAQ */
+  .FAQ h2 {
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для заголовка h1 в .trialDiet */
+  .trialDiet h2 {
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для параграфов в .trialDiet */
+  .trialDiet p {
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для .trialDiet */
+  .trialDiet {
+    display: flex; /* Отображение как флексбокс */
+    flex-direction: column; /* Направление колонка */
+  }
+
+  /* Скрытие элемента .dssp_none */
+  .dssp_none {
+    display: none;
+  }
+
+  /* Изменения для .programm_grid_top */
+  .programm_grid_top {
+    display: grid; /* Отображение как сетка */
+    grid-template-rows: 1fr 1fr 1fr 1fr; /* Определение строк */
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 30px; /* Расстояние между элементами */
+  }
+
+  /* Изменения для .programm_grid_bottom */
+  .programm_grid_bottom {
+    margin-top: 30px; /* Верхний отступ */
+    display: grid; /* Отображение как сетка */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; /* Определение строк */
+    grid-template-columns: 1fr; /* Одна колонка */
+    gap: 30px; /* Расстояние между элементами */
+  }
+
+  /* Изменения для .pr_disp */
+  .pr_disp {
+    justify-content: space-around; /* Равномерное распределение элементов */
+  }
+
+  /* Изменения для .cont_faq */
+  .cont_faq {
+    margin-top: 30px; /* Верхний отступ */
+    display: flex; /* Отображение как флексбокс */
+    width: 100%; /* Ширина 100% */
+    justify-content: space-around; /* Равномерное распределение элементов */
+  }
+
+  /* Отображение элемента .disp_non */
+  .disp_non {
+    display: flex; /* Отображение как флексбокс */
+    text-align: start; /* Выравнивание текста по началу */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 600; /* Насыщенность шрифта */
+    margin-top: 10px; /* Верхний отступ */
+  }
+
+  /* Изменения для кнопки с id #pickUp */
+  #pickUp {
+    width: 50%; /* Ширина 50% */
+    cursor: pointer; /* Курсор указателя */
+    background-color: #4d8f76; /* Цвет фона */
+    border: none; /* Удаление границы */
+    color: #ffffff; /* Цвет текста */
+    border-radius: 40px; /* Радиус скругления углов */
+    padding: 10px 26px; /* Внутренние отступы */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: bold; /* Насыщенность шрифта */
+    height: 60px; /* Высота */
+    text-wrap: nowrap; /* Перенос текста */
+    margin-right: 10%; /* Правый отступ */
+  }
+
+  /* Отображение элемента .img_none */
+  .img_none {
+    display: flex; /* Отображение как флексбокс */
+    width: 80%; /* Ширина 80% */
+    margin-left: auto; /* Левый отступ авто */
+    margin-right: auto; /* Правый отступ авто */
+    transform: translate(30px, 20px) rotate(20deg); /* Трансформация */
+  }
+
+  /* Изменения для изображений в .container_hand_2 */
+  .container_hand_2 img {
+    width: 40%; /* Ширина 40% */
+  }
+
+  /* Изменения для заголовка h2 в .container_on */
+  .container_on h2 {
+    margin: 0; /* Внешние отступы */
+    font-size: 24px; /* Размер шрифта */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для .disp_gr */
+  .disp_gr {
+    grid-template-columns: 30% 30% 30%; /* Определение колонок */
+    grid-template-rows: 1% 30% 30% 30%; /* Определение строк */
+    margin-top: 30px; /* Верхний отступ */
+    column-gap: 0%; /* Расстояние между колонками */
+    row-gap: 5%; /* Расстояние между строками */
+    justify-content: space-between; /* Равномерное распределение элементов */
+    align-items: center; /* Выравнивание по центру по вертикали */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для параграфов внутри .disp_gr */
+  .disp_gr > p {
+    font-size: 12px; /* Установка размера шрифта */
+    color: #756d6d; /* Установка цвета текста */
+    text-align: center; /* Выравнивание текста по центру */
+    justify-content: end; /* Выравнивание по концу */
+    margin: 0; /* Удаление внешних отступов */
+    padding: 0; /* Удаление внутренних отступов */
+  }
+
+  /* Изменения для элементов с классом .w2 */
+  .w2 {
+    grid-column:  3; /* Занимает две колонки в сетке */
+  }
+
+  /* Изменения для элементов с классом .w3 */
+  .w3 {
+    grid-column: span 3; /* Занимает три колонки в сетке */
+  }
+  .three{
+    grid-column: span 2;
+  }
+
+  /* Изменения для .contai_sel */
+  .contai_sel {
+    height: 40px; /* Высота */
+  }
+
+  /* Изменения для параграфов внутри .contai_sel */
+  .contai_sel p {
+    padding: 10px; /* Внутренние отступы */
+    font-size: 16px; /* Размер шрифта */
+    margin: 0; /* Удаление внешних отступов */
+  }
+
+  /* Изменения для плейсхолдеров в .one, .two, .three */
+  .one::placeholder,
+  .two::placeholder,
+  .three::placeholder {
+    font-size: 14px; /* Размер шрифта */
+  }
+
+  /* Изменения для селекторов внутри .disp_gr */
+  .disp_gr select {
+    font-size: 14px; /* Размер шрифта */
+  }
+
+  /* Изменения для .calculate */
+  .calculate {
+    margin-top: 30px; /* Верхний отступ */
+  }
+
+  /* Скрытие элемента .dis_eigh */
+  .dis_eigh {
+    display: none; /* Скрытие элемента */
+  }
+
+  /* Отображение элемента .dis_eigh_on */
+  .dis_eigh_on {
+    display: flex; /* Отображение как флексбокс */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для .programm_cont */
+  .programm_cont {
+    display: flex; /* Отображение как флексбокс */
+    flex-direction: column; /* Направление колонка */
+  }
+
+  /* Изменения для .pr_right */
+  .pr_right {
+    display: flex; /* Отображение как флексбокс */
+    justify-content: center; /* Выравнивание по центру по горизонтали */
+  }
+
+  /* Изменения для .foot_left */
+  .foot_left {
+    width: 100%; /* Ширина 100% */
+  }
+
+  /* Изменения для заголовка h3 в .qq */
+  .qq h3 {
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для .container_about */
+  .container_about {
+    margin-top: 0px; /* Верхний отступ */
+  }
+}
+
+@media (max-width: 700px){
+  .cont_faq_col select{
+    font-size: 20px;
+  }
+  .disp_gr input::placeholder{
+    font-size: 12px;
+  }
+  .disp_gr input{
+    padding: 0 0 0 10px;
+  }
+  .disp_gr select{
+    font-size: 12px;
+    padding: 0 0 0 10px;
+  }
+  .contai_sel p{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Скрытие элемента #carousel */
+  #carousel {
+    display: none;
+  }
+  .disp_gr select{
+    background: none;
+  }
+
+  /* Изменения для .cont_fl */
+  .cont_fl {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+    width: 100%; /* Ширина 100% */
+    justify-content: center; /* Выравнивание содержимого по центру */
+  }
+
+  /* Изменения для .cont_map_nav */
+  .cont_map_nav {
+    width: 100%; /* Ширина 100% */
+    margin-top: 20px; /* Верхний отступ */
+    text-align: center; /* Выравнивание текста по центру */
+  }
+  .cont_map_nav p {
+    margin-top: 5px; /* Верхний отступ для параграфов */
+  }
+  .cont_map_nav button {
+    margin-top: 10px; /* Верхний отступ для кнопок */
+  }
+
+  /* Изменения для iframe */
+  iframe {
+    width: 100%; /* Ширина 100% */
+    height: 300px; /* Высота 300 пикселей */
+  }
+
+  /* Изменения для #call_me */
+  #call_me {
+    height: 50px; /* Высота 50 пикселей */
+  }
+
+  /* Изменения для .stayInformed */
+  .stayInformed {
+    margin-top: 40px; /* Верхний отступ */
+  }
+
+  /* Изменения для .stayInformed_right input */
+  .stayInformed_right input {
+    padding-left: 12px; /* Внутренний отступ слева */
+  }
+
+  /* Изменения для .dadadada p */
+  .dadadada p {
+    margin-top: 10px; /* Верхний отступ */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: 600; /* Начертание шрифта */
+  }
+  .stayInformed_right{
+    width: 100%;
+  }
+
+  .stayInformed_right button{
+    letter-spacing: normal;
+  }
+
+  /* Изменения для .disp_1 */
+  .disp_1 {
+    flex-direction: column-reverse; /* Изменение направления флексбокса на колонку с обратным порядком */
+  }
+
+  /* Изменения для .footer_left */
+  .footer_left {
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+  }
+
+  /* Изменения для .disp_1 h2:nth-child(1) */
+  .disp_1 h2:nth-child(1) {
+    margin: 0; /* Удаление внешних отступов */
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для .bottom */
+  .bottom {
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для .stayInformed h1 */
+  .stayInformed h1 {
+    font-size: 40px; /* Размер шрифта */
+  }
+
+  /* Изменения для .container_freeConsultation h1 */
+  .container_freeConsultation h1 {
+    font-size: 40px; /* Размер шрифта */
+    line-height: normal; /* Обычный межстрочный интервал */
+  }
+
+  /* Изменения для .cont_faq */
+  .cont_faq {
+    margin-top: 30px; /* Верхний отступ */
+    display: flex; /* Отображение как флексбокс */
+    width: 100%; /* Ширина 100% */
+    justify-content: space-around; /* Равномерное распределение элементов по горизонтали */
+  }
+  .cont_faq button {
+    width: 40%; /* Ширина кнопок */
+    font-size: 20px; /* Размер шрифта */
+  }
+
+  /* Изменения для кнопок в .foot_left */
+  .foot_left button {
+    width: 90%; /* Ширина кнопок */
+  }
+
+  /* Скрытие элемента .none_600 */
+  .none_600 {
+    display: none;
+  }
+
+  /* Изменения для .btns */
+  .btns {
+    width: 80%; /* Ширина кнопок */
+    margin: 15px 0; /* Внешние отступы */
+  }
+
+  /* Изменения для .menu */
+  .menu {
+    display: flex; /* Отображение как флексбокс */
+    flex-direction: column; /* Изменение направления флексбокса на колонку */
+  }
+
+  /* Изменения для селекторов в .cont_faq_col */
+  .cont_faq_col select {
+    font-size: 18px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовков h2 в .container_hand_1 и .container_hand_2 */
+  .container_hand_1 h2,
+  .container_hand_2 h2 {
+    margin-top: 15px; /* Верхний отступ */
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для параграфов в .container_hand_1 и .container_hand_2 */
+  .container_hand_1 p,
+  .container_hand_2 p {
+    font-size: 20px; /* Размер шрифта */
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для изображений в .container_hand_1 */
+  .container_hand_1 img {
+    width: 50%; /* Ширина изображений */
+  }
+
+  /* Изменения для изображений в .container_hand_2 */
+  .container_hand_2 img {
+    width: 50%; /* Ширина изображений */
+  }
+
+  /* Изменения для заголовка h2 в .pr_left */
+  .pr_left h2 {
+    font-size: 30px; /* Размер шрифта */
+    justify-content: center; /* Выравнивание содержимого по центру */
+  }
+
+  /* Изменения для .pr_right */
+  .pr_right {
+    margin-top: 20px; /* Верхний отступ */
+  }
+
+  /* Изменения для .programm_cal */
+  .programm_cal {
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  /* Изменения для заголовка h1 в .about */
+  .about h1 {
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовка h3 в .qq */
+  .qq h3 {
+    font-size: 20px; /* Размер шрифта */
+  }
+
+  /* Изменения для .qq */
+  .qq {
+    margin-top: 10px; /* Верхний отступ */
+  }
+
+  /* Изменения для заголовка h1 в .map */
+  .map h1 {
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для параграфов в .map */
+  .map p {
+    font-size: 18px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовка h2 в .FAQ */
+  .FAQ h2 {
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовка h1 в .container_freeConsultation */
+  .container_freeConsultation h1 {
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для .freeConsultation */
+  .freeConsultation {
+    height: 40vh; /* Высота 40% от высоты видимой области */
+  }
+
+  /* Изменения для заголовка h2 в .freeConsultation */
+  .freeConsultation h2 {
+    font-size: 30px; /* Размер шрифта */
+  }
+
+  /* Изменения для заголовка h1 в .trialDiet */
+  .trialDiet h1 {
+    font-size: 35px; /* Размер шрифта */
+  }
+  .stayInformed h1 {
+    font-size: 35px; /* Установка размера шрифта 35px */
+  }
+
+  /* Изменения для input в .stayInformed_right */
+  .stayInformed_right input {
+    padding-right: 5px; /* Правый внутренний отступ 5px */
+  }
+}

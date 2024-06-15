@@ -1,0 +1,1358 @@
+/* Устанавливаем базовые стили для всего документа */
+body {
+  margin: 0;
+  background-color: #faf6f2;
+}
+
+/* Применяем box-sizing: border-box ко всем элементам, включая псевдоэлементы */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Контейнер страницы, занимающий всю доступную высоту окна браузера */
+.page {
+  overflow: hidden; /* скрываем возможное переполнение */
+  display: flex; /* используем flexbox для расположения */
+  flex-direction: column; /* располагаем элементы в столбец */
+  min-height: 100vh; /* минимальная высота равная высоте окна браузера */
+}
+
+/* Стили для верхней панели (шапки) первого блока */
+header.first {
+  background-color: #a98c64; /* цвет фона */
+  height: 70px; /* высота */
+  display: flex; /* flexbox для расположения */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+  justify-content: space-around; /* равномерное распределение элементов по горизонтали */
+}
+
+/* Стили для ссылок внутри элементов с классом "frirst_2", когда они в фокусе */
+.frirst_2 a:focus {
+  color: white;
+}
+
+/* Стили для ссылок внутри элементов с классом "frirst_2", когда они активны */
+.frirst_2 a:active {
+  color: red;
+}
+
+/* Стили для ссылок внутри элементов с классом "frirst_2", когда на них наведен курсор */
+.frirst_2 a:hover {
+  color: #e8cca4;
+}
+
+/* Стили для ссылок с атрибутом title="Перезвоните мне", когда они посещены */
+a[title="Перезвоните мне"]:visited {
+  color: green;
+}
+
+/* Стили для ссылок с атрибутом title="Перезвоните мне", когда они в фокусе */
+a[title="Перезвоните мне"]:focus {
+  color: red;
+}
+
+/* Стили для ссылок с атрибутом title="Перезвоните мне", когда они активны */
+a[title="Перезвоните мне"]:active {
+  color: #e8cca4;
+}
+
+/* Стили для ссылок с атрибутом title="Перезвоните мне", когда на них наведен курсор */
+a[title="Перезвоните мне"]:hover {
+  color: black;
+}
+
+/* Анимация для текста класса .morph */
+.morph {
+  font-size: 70px;
+  font-weight: 600;
+  animation: morphing 3s infinite alternate; /* анимация скалирования */
+}
+
+@keyframes morphing {
+  0% {
+    transform: scale(1); /* начальное состояние */
+  }
+  100% {
+    transform: scale(1.1); /* конечное состояние */
+  }
+}
+
+/* Стили для звездочки */
+.star {
+  width: 20px;
+  height: 20px;
+  background-color: gold;
+  clip-path: polygon(
+    50% 0%,
+    61.8% 38.2%,
+    100% 38.2%,
+    69.1% 61.8%,
+    80.9% 100%,
+    50% 76.4%,
+    19.1% 100%,
+    30.9% 61.8%,
+    0% 38.2%,
+    38.2% 38.2%
+  ); /* задаем форму звезды */
+}
+
+/* Стили для текста и ссылок в шапке */
+.first,
+.first a {
+  color: #ffffff; /* цвет текста */
+  font-weight: bold; /* жирный шрифт */
+  font-size: 24px; /* размер шрифта */
+  text-decoration: none; /* убираем подчеркивание у ссылок */
+}
+
+/* Стили для блоков .first_1 и .first_2 внутри .first */
+.first .first_1,
+.first .first_2 {
+  display: flex; /* flexbox для расположения */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+}
+
+.frirst_1 {
+  display: flex;
+  align-items: center;
+}
+
+.frirst_1 h3 {
+  margin: 0px 0 0 5px;
+}
+
+/* Стили для заголовка h3 внутри .first_1 */
+.first .first_1 h3 {
+  margin-left: 5%; /* отступ слева */
+  font-size: 24px; /* размер шрифта */
+  font-weight: bold; /* жирный шрифт */
+  text-wrap: nowrap; /* предотвращаем перенос текста */
+  flex-wrap: nowrap; /* предотвращаем перенос текста */
+}
+
+/* Стили для ссылок внутри .first_2 */
+.first .first_2 a {
+  margin-right: 20px; /* отступ справа */
+  text-decoration: underline; /* подчеркиваем ссылки */
+}
+
+/* Основной блок контента */
+main {
+  margin: 0 4% 0 4%; /* внешние отступы */
+  align-items: center; /* выравниваем элементы по центру */
+}
+
+/* Шапка второго блока */
+header.second {
+  margin-top: 2%; /* отступ сверху */
+  display: flex; /* flexbox для расположения */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+}
+
+/* Стили для ссылок в блоке .link */
+.link a {
+  text-decoration: none; /* убираем подчеркивание у ссылок */
+  margin: 30px; /* внешние отступы */
+  color: #493e3e; /* цвет текста */
+  font-size: 18px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Контактная информация */
+.call {
+  display: flex; /* flexbox для расположения */
+  flex-direction: column; /* располагаем элементы в столбец */
+  align-items: end; /* выравниваем элементы в конец */
+}
+
+/* Стили для ссылок внутри .call */
+.call a {
+  font-size: 14px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  color: #4d8f76; /* цвет текста */
+  margin: 0; /* внешние отступы */
+}
+
+/* Последний параграф в .call */
+.call p:last-child {
+  color: gray; /* цвет текста */
+  font-size: 12px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  margin: 0; /* внешние отступы */
+}
+
+/* Параграфы в .call */
+.call p {
+  margin: 8px 0 0 0; /* внешние отступы */
+  padding: 0; /* отступы внутри блока */
+  color: #493e3e; /* цвет текста */
+  font-size: 24px; /* размер шрифта */
+  font-weight: 900; /* жирный шрифт */
+}
+
+/* Контейнер для блоков с едой */
+.container_food {
+  display: flex; /* flexbox для расположения */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+}
+
+/* Кнопки первой группы */
+.btnf {
+  display: flex; /* flexbox для расположения */
+  flex-direction: column; /* располагаем элементы в столбец */
+  justify-content: space-around; /* равномерное распределение элементов по вертикали */
+  align-items: start; /* выравниваем элементы слева */
+}
+
+/* Первая кнопка в .btn_first */
+.btn_first {
+  width: 100%; /* ширина 100% */
+  display: flex; /* flexbox для расположения */
+  align-items: start; /* выравниваем элементы слева */
+}
+
+/* Стили для кнопки с id="pickUp" */
+#pickUp {
+  cursor: pointer; /* меняем курсор при наведении */
+  background: linear-gradient(155deg, #4d8f76, #e2ddc0); /* градиентный фон */
+  border: none; /* убираем границу */
+  color: #ffffff; /* цвет текста */
+  border-radius: 40px; /* скругляем углы */
+  padding: 9px 26px; /* внутренние отступы */
+  font-size: 16px; /* размер шрифта */
+  font-weight: bold; /* жирный шрифт */
+  height: 50px; /* высота кнопки */
+  text-wrap: nowrap; /* предотвращаем перенос текста */
+  margin-right: 20px; /* отступ справа */
+}
+
+/* Стили для кнопки с id="take" (продолжение) */
+#take {
+  cursor: pointer; /* изменяем курсор при наведении */
+  font-weight: bold; /* жирный шрифт */
+  font-size: 16px; /* размер шрифта */
+  color: #4d8f76; /* цвет текста */
+  background-color: #ffffff00; /* прозрачный фон */
+  border: 1px solid #4d8f76; /* граница */
+  padding: 9px 26px; /* внутренние отступы */
+  text-wrap: nowrap; /* предотвращаем перенос текста */
+  border-radius: 40px; /* скругляем углы */
+  height: 50px; /* высота кнопки */
+}
+
+/* Заголовок h1 в блоке .btn */
+.btn h1 {
+  text-align: left; /* выравниваем текст по левому краю */
+  font-size: 60px; /* размер шрифта */
+  font-weight: 900; /* жирный шрифт */
+}
+
+/* Контейнер .container_hand */
+.container_hand {
+  display: none; /* скрываем контейнер */
+  flex-direction: column; /* располагаем элементы в столбец */
+  justify-content: space-between; /* равномерное распределение элементов по вертикали */
+  margin-top: 30px; /* отступ сверху */
+}
+
+/* Стили для .container_hand_1 и .container_hand_2 */
+.container_hand_1,
+.container_hand_2 {
+  display: flex; /* flexbox для расположения */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+}
+
+.container_hand_2{
+  margin-top: 20px;
+}
+
+/* Заголовок h2 в .container_hand_1 и .container_hand_2 */
+.container_hand_1 h2,
+.container_hand_2 h2 {
+  font-size: 48px; /* размер шрифта */
+  font-weight: 900; /* жирный шрифт */
+}
+
+/* Параграфы p в .container_hand_1 и .container_hand_2 */
+.container_hand_1 p,
+.container_hand_2 p {
+  font-size: 20px; /* размер шрифта */
+  font-weight: 400; /* нормальный шрифт */
+  line-height: 27px; /* высота строки */
+}
+
+/* Оформление изображений в .container_hand_1 и .container_hand_2 */
+.container_hand_1 img,
+.container_hand_2 img {
+  width: 30%;
+  box-shadow: 0 10px 35px teal; /* тень */
+  border-radius: 30px; /* скругляем углы */
+  padding: 10px; /* внутренние отступы */
+}
+
+/* Стили для контейнера .container_selection */
+.container_selection {
+  display: none; /* скрываем контейнер */
+  border-radius: 30px; /* скругляем углы */
+  margin-top: 80px; /* отступ сверху */
+  background-color: #e2ddc0; /* цвет фона */
+  padding: 30px; /* внутренние отступы */
+}
+
+/* HOWER-эффекты на параграфах в .contai_sel */
+.contai_sel p:hover {
+  cursor: pointer; /* меняем курсор при наведении */
+  background-color: #dfccb7; /* изменяем фон при наведении */
+}
+
+/* Заголовок h2 в .container_on */
+.container_on h2 {
+  margin: 0; /* сбрасываем внешний отступ */
+  font-size: 40px; /* размер шрифта */
+}
+
+/* Контейнер disp_gr с использованием grid */
+.disp_gr {
+  display: grid; /* используем grid для расположения элементов */
+  grid-template-columns: 8% 9% 9% 12% 15% 15% 15%; /* ширина колонок */
+  grid-template-rows: 10% 60%; /* высота строк */
+  margin-top: 30px; /* отступ сверху */
+  column-gap: 2%; /* горизонтальный отступ между колонками */
+  row-gap: 10%; /* вертикальный отступ между строками */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+  text-align: center; /* выравниваем текст по центру */
+}
+
+/* Заголовок h2 в .freeConsultation */
+.freeConsultation h2 {
+  color: white; /* цвет текста */
+  font-size: 48px; /* размер шрифта */
+}
+
+/* Параграфы p в .disp_gr */
+.disp_gr > p {
+  font-size: 12px; /* размер шрифта */
+  color: #756d6d; /* цвет текста */
+}
+
+/* Контейнер .contai_sel */
+.contai_sel {
+  background-color: #faf6f2; /* цвет фона */
+  border-radius: 60px; /* скругление углов */
+  display: flex; /* flexbox для расположения */
+  justify-content: space-around; /* равномерное распределение элементов по горизонтали */
+}
+
+/* Стили для параграфов p внутри .contai_sel */
+.contai_sel p {
+  border-radius: 50%; /* скругление углов */
+  padding: 10px; /* внутренние отступы */
+  margin: 10px 0; /* внешние отступы сверху и снизу */
+}
+
+/* Стили для кнопки .calculate */
+.calculate {
+  background-color: #4d8f76; /* цвет фона */
+  color: #ffffff; /* цвет текста */
+  height: 100%; /* высота */
+  border: none; /* убираем границу */
+  border-radius: 40px; /* скругление углов */
+  font-size: 16px; /* размер шрифта */
+}
+
+/* Стили для ввода input внутри .disp_gr */
+.disp_gr input {
+  font-size: 16px; /* размер шрифта */
+  color: #493e3e; /* цвет текста */
+  background-color: #faf6f2; /* цвет фона */
+  border-radius: 40px; /* скругление углов */
+  padding: 0 20px; /* внутренние отступы слева и справа */
+  height: 100%; /* высота */
+  border: none; /* убираем границу */
+}
+
+/* Стили для выпадающего списка select внутри .disp_gr */
+.disp_gr select {
+  font-size: 16px; /* размер шрифта */
+  color: #493e3e; /* цвет текста */
+  background-color: #faf6f2; /* цвет фона */
+  border-radius: 40px; /* скругление углов */
+  padding: 0 20px; /* внутренние отступы слева и справа */
+  height: 100%; /* высота */
+  border: none; /* убираем границу */
+  appearance: none; /* убираем стандартные стрелки у выпадающего списка */
+  background: url(../Icons/ArrowSmall.svg) no-repeat right; /* добавляем свою иконку стрелки */
+  background-position-x: calc(100% - 10px); /* позиционируем иконку стрелки */
+}
+
+/* Контейнер .programm */
+.programm {
+  background-color: #ffffff; /* цвет фона */
+  border-radius: 30px 30px 0 0; /* скругление верхних углов */
+  padding: 30px; /* внутренние отступы */
+  margin-top: 70px; /* отступ сверху */
+}
+
+/* Заголовок h2 в .pr_left */
+.pr_left h2 {
+  font-size: 48px; /* размер шрифта */
+  margin: 0; /* сбрасываем внешний отступ */
+}
+
+/* Контейнер .programm_cont */
+.programm_cont {
+  display: flex; /* flexbox для расположения */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+}
+
+/* Контейнер .pr_right */
+.pr_right {
+  display: flex; /* flexbox для расположения */
+  text-align: center; /* выравниваем текст по центру */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+}
+
+/* Оформление изображений img в .pr_right */
+.pr_right img {
+  width: 13%; /* ширина изображения */
+  margin-right: 2%; /* отступ справа */
+}
+
+/* Стили для параграфа p в .pr_right */
+.pr_right p {
+  color: #4d8f76; /* цвет текста */
+  font-size: 16px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  margin: 0; /* сбрасываем внешний отступ */
+}
+
+/* Стили для текста .programm_cal */
+.programm_cal {
+  margin-top: 30px; /* отступ сверху */
+  font-size: 20px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  color: #493e3e; /* цвет текста */
+}
+
+/* Контейнер .programm_grid_top с использованием grid */
+.programm_grid_top {
+  display: grid; /* используем grid для расположения элементов */
+  grid-template-rows: 1fr; /* одна строка */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* пять колонок */
+  gap: 30px; /* расстояние между элементами */
+}
+
+/* Контейнер .pr */
+.pr {
+  border-radius: 30px; /* скругление углов */
+  border: 2px solid #dfccb7; /* граница */
+  display: flex; /* flexbox для расположения */
+  padding: 5px 10px; /* внутренние отступы */
+  flex-direction: column; /* располагаем элементы в столбец */
+  justify-content: space-around; /* равномерное распределение элементов по вертикали */
+}
+
+/* Стили для .pr при наведении */
+.pr:hover {
+  background-color: #dfccb7; /* изменяем фон при наведении */
+  cursor: pointer; /* меняем курсор при наведении */
+  margin: 0; /* сбрасываем внешний отступ */
+}
+
+/* Первый параграф p внутри .pr */
+.pr p:first-child {
+  margin: 0; /* сбрасываем внешний отступ */
+  font-size: 24px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  text-align: center; /* выравниваем текст по центру */
+}
+
+/* Второй параграф p внутри .pr */
+.pr p:last-child {
+  margin: 0; /* сбрасываем внешний отступ */
+  text-align: center; /* выравниваем текст по центру */
+  font-size: 16px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Контейнер .programm_grid_bottom */
+.programm_grid_bottom {
+  margin-top: 30px; /* отступ сверху */
+  display: grid; /* используем grid для расположения элементов */
+  grid-template-rows: 1fr; /* одна строка */
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* пять колонок */
+  gap: 30px; /* расстояние между элементами */
+}
+
+/* Контейнер .pr_disp */
+.pr_disp {
+  display: flex; /* flexbox для расположения */
+  margin-top: 30px; /* отступ сверху */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+}
+
+/* Параграф p внутри .pr_disp */
+.pr_disp p {
+  font-size: 14px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  line-height: 25px; /* высота строки */
+}
+
+/* Контейнер .fss */
+.fss {
+  margin-left: 2%; /* отступ слева */
+  display: flex; /* flexbox для расположения */
+  padding: 4px; /* внутренние отступы */
+  border: 2px solid #dfccb7; /* граница */
+  border-radius: 60px; /* скругление углов */
+}
+
+/* Параграф p внутри .fss */
+.fss p {
+  font-size: 16px; /* размер шрифта */
+  padding: 10px 20px; /* внутренние отступы */
+  margin: 0; /* сбрасываем внешний отступ */
+}
+
+/* Параграф p внутри .fss при наведении */
+.fss p:hover {
+  background-color: #dfccb7; /* изменяем фон при наведении */
+  border-radius: 50%; /* скругляем углы */
+  cursor: pointer; /* меняем курсор при наведении */
+}
+
+/* Заголовок .primer */
+.primer {
+  font-size: 20px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  margin-top: 30px; /* отступ сверху */
+}
+
+/* Параграф .primer_p */
+.primer_p {
+  font-size: 16px; /* размер шрифта */
+  color: #a98c64; /* цвет текста */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Контейнер .buttns */
+.buttns {
+  display: flex; /* flexbox для расположения */
+  justify-content: space-between; /* равномерное распределение элементов по горизонтали */
+  width: 85%; /* ширина контейнера */
+  margin-top: 20px; /* отступ сверху */
+}
+
+/* Кнопка .btns */
+.btns {
+  background-color: #1eb94a00; /* цвет фона */
+  border: 2px solid #dfccb7; /* граница */
+  padding: 10px 25px; /* внутренние отступы */
+  font-size: 24px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  border-radius: 40px; /* скругление углов */
+}
+
+/* Кнопка .btns при наведении */
+.btns:hover {
+  cursor: pointer; /* меняем курсор при наведении */
+  background-color: #dfccb7; /* изменяем фон при наведении */
+}
+
+/* Контейнер .menu */
+.menu {
+  margin-top: 30px; /* отступ сверху */
+  display: grid; /* используем grid для расположения элементов */
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* четыре колонки */
+  grid-template-rows: 1fr 100%; /* одна строка с равным распределением */
+}
+
+/* Стили для элементов <pre> внутри .menu */
+.menu pre {
+  margin: 0; /* сбрасываем внешний отступ */
+  color: #a98c64; /* цвет текста */
+  font-size: 14px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Стили для параграфов <p> в .menu */
+.menu p {
+  font-size: 16px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Стили для изображений <img> в .menu при наведении */
+.menu img:hover {
+  background-color: #dfccb7; /* изменяем фон при наведении */
+  border-radius: 50%; /* скругляем углы */
+}
+
+/* Контейнер .programm_footer */
+.programm_footer {
+  background-color: #a2be95; /* цвет фона */
+  display: flex; /* flexbox для расположения */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+  border-radius: 0 0 30px 30px; /* скругление нижних углов */
+}
+
+/* Левая часть .foot_left */
+.foot_left {
+  width: 35%; /* ширина контейнера */
+  display: flex; /* flexbox для расположения */
+  flex-direction: column; /* располагаем элементы в столбец */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+}
+
+/* Кнопка button в .foot_left */
+.foot_left button {
+  color: #ffffff; /* цвет текста */
+  background-color: #4d8f76; /* цвет фона */
+  border: none; /* убираем границу */
+  border-radius: 40px; /* скругление углов */
+  font-size: 16px; /* размер шрифта */
+  font-weight: bold; /* жирный шрифт */
+  padding: 10px 27px; /* внутренние отступы */
+}
+
+/* Параграф p в .foot_left */
+.foot_left p {
+  font-size: 16px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+  color: white; /* цвет текста */
+}
+
+/* Правая часть .foot_right */
+.foot_right {
+  display: flex; /* flexbox для расположения */
+  align-items: center; /* выравниваем элементы по центру по вертикали */
+  width: 65%; /* ширина контейнера */
+}
+
+/* Изображение img в .foot_right */
+.foot_right img {
+  margin-right: 45px; /* отступ справа */
+}
+
+/* Контейнер .disp_col */
+.disp_col {
+  display: flex; /* flexbox для расположения */
+  flex-direction: column; /* располагаем элементы в столбец */
+}
+
+/* Параграфы p внутри .disp_col */
+.disp_col p {
+  color: white; /* цвет текста */
+}
+
+/* Первый параграф p в .disp_col */
+.disp_col p:first-child {
+  font-weight: 600; /* жирный шрифт */
+  margin: 30px 0 7px 0; /* внешние отступы */
+  font-size: 24px; /* размер шрифта */
+}
+
+/* Последний параграф p в .disp_col */
+.disp_col p:last-child {
+  font-weight: 600; /* жирный шрифт */
+  font-size: 16px; /* размер шрифта */
+  margin: 0 0 30px 0; /* внешние отступы */
+}
+
+/* Контейнер .about */
+.about {
+  margin-top: 70px; /* отступ сверху */
+}
+
+/* Заголовок h1 в .about */
+.about h1 {
+  font-size: 48px; /* размер шрифта */
+  font-weight: 600; /* жирный шрифт */
+}
+
+/* Заголовок h3 в .qq */
+.qq h3 {
+  font-size: 24px; /* размер шрифта */
+  font-weight: 900; /* жирный шрифт */
+}
+
+/* Параграф p в .qq */
+.qq p {
+  font-weight: 500; /* полужирный шрифт */
+  font-size: 16px; /* размер шрифта */
+}
+
+/* Контейнер .container_about */
+.container_about {
+  margin-top: 50px; /* отступ сверху */
+  display: grid; /* используем grid layout */
+  grid-template-columns: 1fr 1fr 1fr; /* три столбца */
+  grid-template-rows: 1fr 1fr; /* два ряда */
+  gap: 40px; /* промежуток между элементами */
+}
+
+/* Контейнер .taste */
+.taste {
+  margin-top: 80px; /* отступ сверху */
+  display: flex; /* flexbox для расположения элементов */
+  justify-content: space-between; /* равномерное распределение по горизонтали */
+}
+
+/* Левая часть .left_cont */
+.left_cont {
+  display: flex; /* flexbox для расположения элементов */
+  flex-direction: column; /* элементы располагаются в столбец */
+}
+
+/* Заголовок h3 в .left_cont */
+.left_cont h3 {
+  font-size: 24px; /* размер шрифта */
+  font-weight: 900; /* жирный шрифт */
+  color: #4d8f76; /* цвет текста */
+}
+
+/* Параграф p в .left_cont */
+.left_cont p {
+  margin-top: 30px; /* отступ сверху */
+  font-size: 16px; /* размер шрифта */
+  font-weight: 500; /* полужирный шрифт */
+  line-height: 20px; /* высота строки */
+}
+
+/* Правая часть .right_cont */
+.right_cont {
+  display: flex; /* flexbox для расположения элементов */
+  align-items: center; /* выравнивание по центру по вертикали */
+}
+
+/* Изображение img в .right_cont */
+.right_cont > img {
+  width: 400px; /* ширина изображения */
+}
+
+/* Кнопки button в .right_cont */
+.right_cont button:nth-child(1) {
+  margin-right: 60px; /* отступ справа */
+}
+
+.right_cont button:nth-child(3) {
+  margin-left: 60px; /* отступ слева */
+}
+
+/* Контейнер .map */
+.map {
+  margin-top: 50px; /* отступ сверху */
+  padding: 30px; /* внутренние отступы */
+  border-radius: 30px; /* скругление углов */
+  background-color: #f4edde; /* цвет фона */
+}
+
+/* Заголовок h1 в .map */
+.map h1 {
+  font-size: 48px; /* размер шрифта */
+  font-weight: 800; /* жирный шрифт */
+}
+
+/* Параграф p в .map */
+.map p {
+  font-size: 24px; /* размер шрифта */
+  font-weight: 600; /* полужирный шрифт */
+}
+
+/* Ифрейм iframe */
+iframe {
+  width: 60%; /* ширина iframe */
+  border-radius: 30px; /* скругление углов */
+}
+
+/* Контейнер .cont_fl */
+.cont_fl {
+  display: flex; /* flexbox для расположения элементов */
+  justify-content: space-between; /* равномерное распределение по горизонтали */
+}
+
+/* Оформление гиперссылок .nav-link при наведении */
+.nav-link:hover {
+  box-shadow: 5px -10px teal; /* тень при наведении */
+  border-radius: 30px; /* скругление углов */
+}
+
+/* Контейнер .cont_map_nav */
+.cont_map_nav {
+  width: 35%; /* ширина контейнера */
+  display: flex; /* flexbox для расположения элементов */
+  flex-direction: column; /* элементы располагаются в столбец */
+  justify-content: space-between; /* равномерное распределение по вертикали */
+}
+
+/* Кнопки button в .cont_map_nav */
+.cont_map_nav button {
+  width: 100%; /* ширина кнопки */
+  height: 10%; /* высота кнопки */
+  border-radius: 30px; /* скругление углов */
+  font-weight: 600; /* жирный шрифт */
+  font-size: 20px; /* размер шрифта */
+}
+
+/* Параграф p в .cont_map_nav */
+.cont_map_nav p {
+  font-size: 16px; /* размер шрифта */
+  color: #493e3e; /* цвет текста */
+  margin: 0; /* сбрасываем внешние отступы */
+}
+
+/* Стили для заголовков в блоке с классом cont_map_nav */
+.cont_map_nav h3 {
+  font-size: 24px; /* Устанавливаем размер шрифта заголовков */
+  margin: 0 0 0 0; /* Обнуляем отступы для заголовков */
+}
+
+/* Стили для элемента с id="free" */
+#free {
+  border: 3px solid #1eb949; /* Устанавливаем толщину и цвет рамки */
+  background-color: #ffffff00; /* Устанавливаем прозрачный фон */
+}
+
+/* Стили для элемента с id="free" при наведении курсора */
+#free:hover {
+  background-color: #1eb949; /* Изменяем цвет фона при наведении */
+}
+
+/* Аналогичные стили для элементов с id="one", "three" и "fift" */
+#one {
+  border: 3px solid #34a2fe;
+  background-color: #ffffff00;
+}
+
+#one:hover {
+  background-color: #34a2fe;
+}
+
+#three {
+  border: 3px solid #493e3e;
+  background-color: #ffffff00;
+}
+
+#three:hover {
+  background-color: #493e3e;
+}
+
+#fift {
+  border: 3px solid #fc5239;
+  background-color: #ffffff00;
+}
+
+#fift:hover {
+  background-color: #fc5239;
+}
+
+/* Стили для элемента с id="call_me" */
+#call_me {
+  background-color: #4d8f76; /* Устанавливаем цвет фона */
+  color: white; /* Устанавливаем цвет текста */
+  font-size: 16px; /* Устанавливаем размер шрифта */
+  font-weight: 600; /* Устанавливаем жирность шрифта */
+  letter-spacing: 1.9px; /* Устанавливаем межбуквенный интервал */
+  border: none; /* Убираем границу */
+}
+
+/* FAQ секция */
+.FAQ {
+  margin-top: 70px; /* Отступ сверху для блока FAQ */
+}
+
+.FAQ h2 {
+  font-size: 48px; /* Размер заголовка в блоке FAQ */
+  font-weight: 600; /* Жирность шрифта заголовка */
+}
+
+.cont_faq {
+  margin-top: 30px; /* Отступ сверху для контейнера FAQ */
+  display: flex; /* Отображаем элементы в строку */
+  width: 70%; /* Ширина контейнера FAQ */
+  justify-content: space-between; /* Распределение элементов по ширине контейнера */
+}
+
+.cont_faq button {
+  color: #493e3e; /* Цвет текста кнопок FAQ */
+  width: 24%; /* Ширина кнопок */
+  height: 45px; /* Высота кнопок */
+  border-radius: 45px; /* Радиус скругления углов кнопок */
+  font-size: 24px; /* Размер шрифта кнопок */
+  font-weight: 500; /* Жирность шрифта кнопок */
+  border: 3px solid #dfccb7; /* Толщина и цвет рамки кнопок */
+  background-color: #1eb94a00; /* Прозрачный фон кнопок */
+}
+
+.cont_faq button:hover {
+  background-color: #dfccb7; /* Изменение цвета фона кнопок при наведении */
+}
+
+.cont_faq_col {
+  margin-top: 30px; /* Отступ сверху для колонки FAQ */
+  display: flex; /* Отображаем элементы колонки в столбец */
+  flex-direction: column; /* Направление элементов в колонке */
+}
+
+.cont_faq_col select {
+  height: 60px; /* Высота выпадающего списка */
+  font-size: 24px; /* Размер шрифта в выпадающем списке */
+  font-weight: 600; /* Жирность шрифта в выпадающем списке */
+  border: none; /* Убираем границу у выпадающего списка */
+  border-radius: 30px; /* Радиус скругления углов выпадающего списка */
+  padding: 0 30px 0 30px; /* Внутренний отступ внутри выпадающего списка */
+  margin: 20px 0 20px 0; /* Внешний отступ выпадающего списка */
+  appearance: none; /* Убираем стандартные стрелки у выпадающего списка */
+  background: url("../Icons/ArrowDown.svg") no-repeat right; /* Добавляем кастомную стрелку */
+  background-position-x: calc(100% - 30px); /* Позиция кастомной стрелки */
+  background-color: #ffffff; /* Цвет фона выпадающего списка */
+}
+
+.cont_faq_col select:hover {
+  background-color: #dfccb772; /* Изменение цвета фона выпадающего списка при наведении */
+}
+
+#faq_two {
+  background: url("../Icons/ArrowUp.svg") no-repeat right; /* Добавляем кастомную стрелку вверх */
+  background-position-x: calc(100% - 30px); /* Позиция кастомной стрелки */
+  background-color: #ffffff; /* Цвет фона элемента FAQ с id="faq_two" */
+  height: 100px; /* Высота элемента FAQ с id="faq_two" */
+  width: 100%; /* Ширина элемента FAQ с id="faq_two" */
+  margin: 0; /* Обнуляем отступы */
+}
+
+/* together секция */
+.together {
+  width: 100%; /* Ширина блока together */
+  background-color: #ffffff; /* Цвет фона блока together */
+  border-radius: 30px; /* Радиус скругления углов блока together */
+}
+
+.together p {
+  margin: 0px 30px 30px 30px; /* Отступы вокруг текста в блоке together */
+  font-size: 16px; /* Размер шрифта текста в блоке together */
+  color: #493e3e; /* Цвет текста в блоке together */
+  line-height: 20px; /* Межстрочный интервал текста в блоке together */
+  font-weight: 500; /* Жирность шрифта текста в блоке together */
+}
+
+/* freeConsultation секция */
+.freeConsultation {
+  background-color: #a2be95; /* Цвет фона блока freeConsultation */
+  border-radius: 30px; /* Радиус скругления углов блока freeConsultation */
+  padding: 10px 30px 0 30px; /* Внутренние отступы блока freeConsultation */
+  margin-top: 8%; /* Отступ сверху блока freeConsultation */
+  display: grid; /* Отображаем элементы в сетке */
+  grid-template-columns: 2fr 1fr; /* Задаем шаблон колонок для сетки */
+}
+
+.container_freeConsultation h1 {
+  color: white; /* Цвет текста заголовка в блоке freeConsultation */
+  font-size: 48px; /* Размер шрифта заголовка в блоке freeConsultation */
+  font-weight: 600; /* Жирность шрифта заголовка в блоке freeConsultation */
+  line-height: 60px; /* Межстрочный интервал заголовка в блоке freeConsultation */
+  margin: 10px 0 0 0; /* Отступы заголовка в блоке freeConsultation */
+}
+
+.container_freeConsultation input {
+  margin-top: 50px; /* Отступ сверху для input в блоке freeConsultation */
+  width: 30%; /* Ширина input в блоке freeConsultation */
+  height: 12%; /* Высота input в блоке freeConsultation */
+  border: none; /* Убираем границу у input в блоке freeConsultation */
+  border-radius: 40px; /* Радиус скругления углов input в блоке freeConsultation */
+}
+
+#name {
+  margin-right: 30px; /* Отступ справа для элемента с id="name" в блоке freeConsultation */
+  padding-left: 15px; /* Внутренний отступ слева для элемента с id="name" в блоке freeConsultation */
+  font-size: 16px; /* Размер шрифта для элемента с id="name" в блоке freeConsultation */
+  font-weight: 600; /* Жирность шрифта для элемента с id="name" в блоке freeConsultation */
+}
+
+#number {
+  padding-left: 15px; /* Внутренний отступ слева для элемента с id="number" в блоке freeConsultation */
+  font-size: 16px; /* Размер шрифта для элемента с id="number" в блоке freeConsultation */
+  font-weight: 600; /* Жирность шрифта для элемента с id="number" в блоке freeConsultation */
+}
+
+/* Стили для кнопок в блоке .container_freeConsultation */
+.container_freeConsultation button {
+  margin-top: 30px; /* Отступ сверху для кнопки */
+  width: 30%; /* Ширина кнопки */
+  height: 12%; /* Высота кнопки */
+  background-color: #4d8f76; /* Цвет фона кнопки */
+  font-size: 16px; /* Размер шрифта кнопки */
+  font-weight: 600; /* Жирность шрифта кнопки */
+  letter-spacing: 1.2px; /* Межбуквенный интервал кнопки */
+  border: none; /* Убираем границу у кнопки */
+  color: white; /* Цвет текста кнопки */
+  border-radius: 40px; /* Радиус скругления углов кнопки */
+}
+
+/* Стили для блока .dadada */
+.dadada {
+  display: flex; /* Отображаем элементы в блоке .dadada в строку */
+  height: 10%; /* Высота блока .dadada */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  justify-content: end; /* Выравнивание элементов в конец по горизонтали */
+  color: white; /* Цвет текста */
+  margin-right: 10px; /* Отступ справа */
+}
+
+.dadada p {
+  font-size: 18px; /* Размер шрифта текста в блоке .dadada */
+  font-weight: 600; /* Жирность шрифта текста в блоке .dadada */
+}
+
+.dadada img {
+  margin-right: 20px; /* Отступ справа для изображения в блоке .dadada */
+}
+
+.img_tel {
+  margin-top: -120px; /* Отрицательный отступ сверху для изображения .img_tel */
+  margin-right: 70px; /* Отступ справа для изображения .img_tel */
+}
+
+/* Стили для секции .trialDiet */
+.trialDiet {
+  margin-top: 80px; /* Отступ сверху для секции .trialDiet */
+}
+
+.trialDiet h1 {
+  font-size: 48px; /* Размер шрифта заголовка в секции .trialDiet */
+  font-weight: 600; /* Жирность шрифта заголовка в секции .trialDiet */
+}
+
+.trialDiet p {
+  margin-top: 50px; /* Отступ сверху для абзаца в секции .trialDiet */
+  font-size: 16px; /* Размер шрифта текста в секции .trialDiet */
+  font-weight: 500; /* Жирность шрифта текста в секции .trialDiet */
+  color: #493e3e; /* Цвет текста в секции .trialDiet */
+  line-height: 25px; /* Межстрочный интервал текста в секции .trialDiet */
+}
+
+.trialDiet button {
+  margin-top: 30px; /* Отступ сверху для кнопки в секции .trialDiet */
+  padding: 10px 46px 10px 46px; /* Внутренние отступы кнопки в секции .trialDiet */
+  background-color: #4d8f76; /* Цвет фона кнопки в секции .trialDiet */
+  font-size: 16px; /* Размер шрифта кнопки в секции .trialDiet */
+  font-weight: 600; /* Жирность шрифта кнопки в секции .trialDiet */
+  letter-spacing: 1.9px; /* Межбуквенный интервал кнопки в секции .trialDiet */
+  border: none; /* Убираем границу у кнопки в секции .trialDiet */
+  color: white; /* Цвет текста кнопки в секции .trialDiet */
+  border-radius: 40px; /* Радиус скругления углов кнопки в секции .trialDiet */
+  height: 50px; /* Высота кнопки в секции .trialDiet */
+}
+
+/* Стили для секции .stayInformed */
+.stayInformed {
+  margin-top: 150px; /* Отступ сверху для секции .stayInformed */
+  background-color: #b89683; /* Цвет фона секции .stayInformed */
+  border-radius: 30px; /* Радиус скругления углов секции .stayInformed */
+  display: flex; /* Отображаем элементы в секции .stayInformed */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  justify-content: space-between; /* Распределение элементов по ширине секции .stayInformed */
+  padding: 30px; /* Внутренние отступы секции .stayInformed */
+  color: white; /* Цвет текста в секции .stayInformed */
+}
+
+.stayInformed h1 {
+  margin: 0; /* Обнуляем отступы для заголовка в секции .stayInformed */
+  font-weight: 600; /* Жирность шрифта заголовка в секции .stayInformed */
+  font-size: 48px; /* Размер шрифта заголовка в секции .stayInformed */
+}
+
+.dadadada {
+  display: flex; /* Отображаем элементы в блоке .dadadada в строку */
+  margin-top: 20px; /* Отступ сверху для блока .dadadada */
+}
+
+.dadadada p {
+  margin: 0; /* Обнуляем отступы для абзацев в блоке .dadadada */
+  font-size: 16px; /* Размер шрифта текста в блоке .dadadada */
+  font-weight: 600; /* Жирность шрифта текста в блоке .dadadada */
+  color: white; /* Цвет текста в блоке .dadadada */
+}
+
+.stayInformed img {
+  margin-right: 15px; /* Отступ справа для изображения в секции .stayInformed */
+}
+
+.stayInformed_right {
+  width: 40%; /* Ширина правой части в секции .stayInformed_right */
+  margin: 0; /* Обнуляем отступы для правой части в секции .stayInformed_right */
+  padding: 0; /* Обнуляем внутренние отступы для правой части в секции .stayInformed_right */
+}
+
+.stayInformed_right input {
+  border-radius: 40px; /* Радиус скругления углов input в секции .stayInformed_right */
+  border: none; /* Убираем границу у input в секции .stayInformed_right */
+  color: #756d6d; /* Цвет текста input в секции .stayInformed_right */
+  font-weight: 600; /* Жирность шрифта input в секции .stayInformed_right */
+  height: 50px; /* Высота input в секции .stayInformed_right */
+  margin-right: 20px; /* Отступ справа для input в секции .stayInformed_right */
+  font-size: 16px; /* Размер шрифта input в секции .stayInformed_right */
+  padding-left: 20px; /* Внутренний отступ слева для input в секции .stayInformed_right */
+}
+
+/* Стили для кнопок в правой части блока .stayInformed */
+.stayInformed_right button {
+  background-color: #4d8f76; /* Цвет фона кнопки */
+  font-size: 16px; /* Размер шрифта кнопки */
+  font-weight: 600; /* Жирность шрифта кнопки */
+  letter-spacing: 1.9px; /* Межбуквенный интервал кнопки */
+  border: none; /* Убираем границу у кнопки */
+  color: white; /* Цвет текста кнопки */
+  border-radius: 40px; /* Радиус скругления углов кнопки */
+  height: 50px; /* Высота кнопки */
+}
+
+/* Общий контейнер */
+.container {
+  display: flex; /* Отображаем элементы внутри контейнера в строку */
+  justify-content: space-between; /* Распределение элементов по ширине контейнера */
+  width: 100%; /* Ширина контейнера */
+}
+
+/* Стили для футера */
+footer {
+  margin-top: auto; /* Верхний отступ футера */
+  margin-bottom: 67px; /* Нижний отступ футера */
+}
+
+/* Контейнер для элементов футера */
+.container_footer {
+  display: flex; /* Отображаем элементы внутри контейнера футера в строку */
+  margin-top: 80px; /* Верхний отступ контейнера футера */
+  justify-content: space-between; /* Распределение элементов по ширине контейнера футера */
+}
+
+/* Стили для блока .disp_1 */
+.disp_1 {
+  display: flex; /* Отображаем элементы внутри блока .disp_1 в строку */
+}
+
+.disp_1 h2 {
+  font-size: 24px; /* Размер шрифта заголовков в блоке .disp_1 */
+  margin: 0; /* Обнуляем отступы у заголовков в блоке .disp_1 */
+}
+
+.disp_1 h2:nth-child(1) {
+  margin-right: 15%; /* Отступ справа для первого заголовка в блоке .disp_1 */
+  font-size: 24px; /* Размер шрифта первого заголовка в блоке .disp_1 */
+}
+
+/* Стили для текста с классом .light */
+.light {
+  margin: 0 0 30px 0; /* Внешние отступы у текста с классом .light */
+  font-size: 12px; /* Размер шрифта текста с классом .light */
+  color: #756d6d; /* Цвет текста с классом .light */
+  font-weight: 500; /* Жирность шрифта текста с классом .light */
+}
+
+/* Стили для текста с классом .ttt */
+.ttt {
+  font-size: 16px; /* Размер шрифта текста с классом .ttt */
+  color: #493e3e; /* Цвет текста с классом .ttt */
+  font-weight: 500; /* Жирность шрифта текста с классом .ttt */
+  margin: 0; /* Обнуляем отступы у текста с классом .ttt */
+}
+
+/* Стили для текста с классом .last */
+.last {
+  font-size: 12px; /* Размер шрифта текста с классом .last */
+  color: #493e3e; /* Цвет текста с классом .last */
+  font-weight: 400; /* Жирность шрифта текста с классом .last */
+}
+
+/* Стили для элементов с классом .green */
+.green {
+  cursor: pointer; /* Изменяем курсор при наведении на элементы с классом .green */
+  color: #4d8f76; /* Цвет текста элементов с классом .green */
+}
+
+/* Стили для правой части футера */
+.footer_right {
+  display: flex; /* Отображаем элементы внутри блока .footer_right в столбец */
+  flex-direction: column; /* Направление элементов - столбец */
+  justify-content: space-between; /* Распределение элементов по высоте блока .footer_right */
+  align-items: end; /* Выравнивание элементов по правому краю */
+}
+
+/* Стили для изображения в блоке .top */
+.top img {
+  margin-left: 30px; /* Отступ слева для изображения в блоке .top */
+}
+
+/* Стили для карусели */
+#carousel {
+  touch-action: none; /* Отключаем действия при касании (для удобства работы с сенсорными экранами) */
+  display: none; /* Скрываем элемент карусели */
+  height: 400px; /* Высота карусели */
+  perspective: 1000px; /* Глубина перспективы для 3D эффекта */
+  transform-style: preserve-3d; /* Сохраняем 3D эффект */
+}
+
+#drag-container,
+#spin-container {
+  position: relative; /* Позиция элементов относительная */
+  display: flex; /* Отображаем элементы в строку */
+  margin: auto; /* Центрируем элементы по горизонтали */
+  transform-style: preserve-3d; /* Сохраняем 3D эффект */
+  transform: rotateX(-10deg); /* Поворот контейнеров по оси X */
+}
+
+#drag-container a {
+  transform-style: preserve-3d; /* Сохраняем 3D эффект */
+  position: absolute; /* Позиционирование абсолютное */
+  left: 0; /* Положение слева */
+  top: 0; /* Положение сверху */
+  width: 100%; /* Ширина элемента */
+  height: 100%; /* Высота элемента */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 10px 16px rgba(0, 0, 0, 0.1); /* Тень элемента */
+  border: 8px solid #bfe2ff; /* Граница элемента */
+}
+
+#drag-container img {
+  width: 100%; /* Ширина изображения */
+  height: 100%; /* Высота изображения */
+  filter: grayscale(50%) contrast(0.8); /* Эффект оттенков серого и контрастности */
+  transition: filter 0.3s; /* Плавное изменение эффекта при наведении */
+}
+
+#drag-container a:hover img {
+  filter: grayscale(0) contrast(1); /* Убираем эффект оттенков серого и увеличиваем контрастность при наведении */
+}
+
+#drag-container p {
+  line-height: 1; /* Высота строки текста */
+  font-size: 50px; /* Размер шрифта текста */
+  font-weight: bold; /* Жирность шрифта */
+  text-align: center; /* Выравнивание текста по центру */
+  font-family: Serif; /* Семейство шрифтов */
+  position: absolute; /* Позиционирование абсолютное */
+  top: 100%; /* Положение сверху */
+  left: 50%; /* Положение слева */
+  transform: translate(-50%, -50%) rotateX(90deg); /* Поворот и смещение текста */
+  color: #337ab7; /* Цвет текста */
+  font-family: Verdana, sans-serif; /* Семейство шрифтов */
+}
+
+/* Стили для элемента #ground */
+#ground {
+  width: 900px; /* Ширина элемента */
+  height: 900px; /* Высота элемента */
+  position: absolute; /* Позиционирование абсолютное */
+  top: 100%; /* Располагаем элемент сверху */
+  left: 50%; /* Располагаем элемент по центру по горизонтали */
+  transform: translate(-50%, -50%) rotateX(90deg); /* Поворачиваем элемент на 90 градусов по оси X */
+}
+
+/* Анимация вращения по оси Y */
+@keyframes spin {
+  from {
+    transform: rotateY(0deg); /* Начальное положение вращения (0 градусов) */
+  }
+  to {
+    transform: rotateY(360deg); /* Конечное положение вращения (360 градусов) */
+  }
+}
+
+/* Анимация возврата вращения по оси Y */
+@keyframes spinRevert {
+  from {
+    transform: rotateY(
+      360deg
+    ); /* Начальное положение вращения (360 градусов) */
+  }
+  to {
+    transform: rotateY(0deg); /* Конечное положение вращения (0 градусов) */
+  }
+}
+
+/* Стили для слайдера */
+.slider {
+  display: flex; /* Отображаем элементы слайдера в строку */
+  align-items: center; /* Выравниваем элементы по вертикали */
+  justify-content: center; /* Выравниваем элементы по горизонтали */
+  /* Добавьте другие стили, если необходимо */
+}
+
+/* Стили для кнопок предыдущего и следующего слайда */
+.prev-button,
+.next-button {
+  border: none; /* Убираем границу у кнопок */
+  background-color: #faf6f2; /* Цвет фона кнопок */
+  cursor: pointer; /* Задаем курсор указателя */
+  /* Добавьте другие стили для кнопок */
+}
+
+/* Стили для модального окна #adModal */
+#adModal {
+  display: none; /* По умолчанию скрываем модальное окно */
+  position: fixed; /* Позиционируем модальное окно фиксированно */
+  z-index: 1000; /* Задаем высокий уровень z-index */
+  left: 0; /* Располагаем модальное окно по левому краю */
+  top: 0; /* Располагаем модальное окно по верхнему краю */
+  width: 100%; /* Ширина модального окна на всю ширину экрана */
+  height: 100%; /* Высота модального окна на всю высоту экрана */
+  overflow: auto; /* Добавляем прокрутку, если контент больше окна */
+  background-color: rgb(0, 0, 0); /* Цвет фона */
+  background-color: rgba(0, 0, 0, 0.4); /* Прозрачность фона */
+}
+
+/* Стили для содержимого модального окна #adContent */
+#adContent {
+  background-color: teal; /* Цвет фона содержимого */
+  margin: 15% auto; /* Внешние отступы сверху и снизу, выравнивание по центру */
+  padding: 20px; /* Внутренние отступы содержимого */
+  border: 1px solid #888; /* Граница содержимого */
+  width: 80%; /* Ширина содержимого */
+  max-width: 600px; /* Максимальная ширина содержимого */
+}
+
+/* Стили для кнопки закрытия модального окна */
+.close {
+  color: #aaa; /* Цвет текста кнопки закрытия */
+  float: right; /* Плавающее позиционирование вправо */
+  font-size: 28px; /* Размер шрифта кнопки закрытия */
+  font-weight: bold; /* Жирность шрифта кнопки закрытия */
+}
+
+.close:hover,
+.close:focus {
+  color: black; /* Цвет текста кнопки закрытия при наведении */
+  text-decoration: none; /* Убираем подчеркивание */
+  cursor: pointer; /* Задаем курсор указателя */
+}
+
+/* Стили для кнопки "Наверх" */
+.btn-top {
+  display: none; /* По умолчанию скрываем кнопку "Наверх" */
+  position: fixed; /* Позиционируем кнопку фиксированно */
+  bottom: 20px; /* Располагаем кнопку от нижнего края */
+  right: 40px; /* Располагаем кнопку от правого края */
+  z-index: 99; /* Задаем высокий уровень z-index */
+  border: none; /* Убираем границу у кнопки */
+  outline: none; /* Убираем контур вокруг кнопки при фокусе */
+  background-color: teal; /* Цвет фона кнопки */
+  color: white; /* Цвет текста кнопки */
+  cursor: pointer; /* Задаем курсор указателя */
+  padding: 15px 40px; /* Внутренние отступы кнопки */
+  border-radius: 10px; /* Радиус скругления углов кнопки */
+}
+
+.btn-top:hover {
+  background-color: rgb(4, 68, 68); /* Цвет фона кнопки при наведении */
+}
+
+/* Стили для выпадающего меню при наведении */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; /* Отображаем выпадающее меню при наведении */
+  color: #a98c64; /* Цвет текста выпадающего меню */
+  border: none; /* Убираем границу у выпадающего меню */
+  background-color: #faf6f2; /* Цвет фона выпадающего меню */
+}

@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пора есть</title>
+    <!-- Подключение стилей Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    >
+    <!--Автор -->
+    <meta name="author" content="Ярослав">
+    <!--Ключевые слова -->
+    <meta name="keywords" content="кулинария, блюда, гурманы, еда">
+    <!--Описание -->
+    <meta name="description" content="Описание содержимого страницы">
+    <!-- Подключение ваших собственных стилей -->
+    <link rel="stylesheet" href="Css/main.css">
+    <link rel="stylesheet" href="Css/font.css">
+    <!-- Иконка сайта -->
+    <link
+      rel="shortcut icon"
+      href="https://static.tildacdn.com/tild3466-3865-4563-b537-346538393563/favicon.ico"
+      type="image/x-icon"
+    >
+    <!-- Медиа-запросы для адаптивности -->
+    <link rel="stylesheet" href="Css/media.css">
+  </head>
+  <body>
+    <!-- Основной контейнер страницы -->
+    <div class="page">
+      <!-- Кнопка "Наверх" -->
+      <button class="btn-top" title="На верх">Наверх</button>
+      <header class="first">
+        <!-- Верхний заголовок (первый блок) -->
+        <!-- Левая часть заголовка -->
+        <div class="frirst_1">
+          <img src="Icons/Sale.svg" alt="Скидка">
+          <h3>Скидка 20% на первый заказ</h3>
+        </div>
+        <!-- Правая часть заголовка -->
+        <div class="frirst_2">
+          <a
+            href="#"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Заказать"
+            >Заказать</a
+          >
+          <img src="Icons/Arrow.svg" alt="Заказать">
+        </div>
+      </header>
+
+      <!-- Модальное окно с предложением -->
+      <div id="adModal">
+        <div id="adContent">
+          <span class="close">×</span>
+          <h2>Специальное предложение!</h2>
+          <p>Получите скидку 50% на ваш первый заказ!</p>
+        </div>
+      </div>
+
+      <main>
+        <nav
+          class="navbar navbar-expand-lg navbar-light"
+          style="margin-top: 20px"
+        >
+          <!-- Логотип сайта -->
+          <img src="Icons/Logo.svg" alt="Логотип" style="margin-right: 5%">
+
+          <!-- Кнопка для мобильного меню (гамбургер) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+          >
+            <!-- Иконка гамбургера -->
+            <span class="navbar-toogler-icon">
+              <img src="Icons/Hamburger.svg" alt="Меню">
+            </span>
+          </button>
+
+          <!-- Содержимое навигации, которое будет скрываться/показываться в зависимости от состояния кнопки -->
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <!-- Список навигационных элементов -->
+            <ul
+              class="navbar-nav mr-auto mb-2"
+              style="margin-left: auto; margin-right: auto"
+            >
+              <!-- Элемент навигации с выпадающим меню "Подбор рациона" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Это подсказка для ссылки"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  Подбор рациона
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Рационы для похудения</a>
+                  <a class="dropdown-item" href="#">
+                    Рационы для набора мышечной массы
+                  </a>
+                  <a class="dropdown-item" href="#">Вегетарианские рационы</a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "Программы питания" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Программы питания"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  Программы питания
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Питание для спортсменов</a>
+                  <a class="dropdown-item" href="#">
+                    Питание для здоровья сердца
+                  </a>
+                  <a class="dropdown-item" href="#">Детокс-программы</a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "О нас" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="Accordion_tab.html"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="О нас"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  О нас
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Наша миссия и ценности</a>
+                  <a class="dropdown-item" href="#">Наша команда экспертов</a>
+                  <a class="dropdown-item" href="#">Наш опыт и история</a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "Доставка" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Доставка"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  Доставка
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Условия доставки</a>
+                  <a class="dropdown-item" href="#">Регионы доставки</a>
+                  <a class="dropdown-item" href="#">
+                    Опции доставки (время и стоимость)
+                  </a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "Акции" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Акции"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  Акции
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    Специальные предложения этого месяца
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Скидки для постоянных клиентов
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Промо-коды на следующую покупку
+                  </a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "FAQ" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="FAQ"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  FAQ
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Как оформить заказ?</a>
+                  <a class="dropdown-item" href="#">
+                    Какие способы оплаты вы принимаете?
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Какие плюсы использования ваших услуг?
+                  </a>
+                </div>
+              </li>
+
+              <!-- Элемент навигации с выпадающим меню "Отзывы" -->
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Отзывы"
+                  style="font-size: 18px; font-weight: 500"
+                >
+                  Отзывы
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">
+                    Что говорят наши клиенты о нашем обслуживании
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    Как мы помогли изменить их жизнь
+                  </a>
+                  <a class="dropdown-item" href="#">Оставьте свой отзыв</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Секция с контактной информацией -->
+          <nav class="call" style="margin-left: 5%">
+            <!-- Ссылка "Перезвоните мне" с тултипом -->
+            <a
+              href=""
+              data-toggle="tooltip"
+              data-placement="top"
+              title="Перезвоните мне"
+            >
+              Перезвоните мне
+            </a>
+            <!-- Номер телефона и часы работы -->
+            <p>+ 7 988 500-1-700</p>
+            <p>с 09:00 до 21:00</p>
+          </nav>
+        </nav>
+
+        <!-- Контейнер для раздела с едой -->
+        <div class="container_food">
+          <!-- Блок с кнопками и текстом -->
+          <div class="btnf">
+            <!-- Заголовок, скрытый на определенных устройствах -->
+            <h1 class="dsp_none morph">
+              Доставка прогрессивного<br>питания для гурманов
+            </h1>
+            <!-- Заголовок для мобильных устройств -->
+            <h1 class="hmedia">Прогрессивное питание<br>на каждый день</h1>
+            <!-- Описание, скрытое на определенных устройствах -->
+            <p class="disp_non">
+              Сбалансированный рацион<br>в современном формате — Супер-боул
+            </p>
+            <!-- Блок с кнопками -->
+            <div class="btn_first">
+              <button id="pickUp">Подобрать питание</button>
+              <button id="take">
+                Получить<br class="br_disp">консультацию
+              </button>
+            </div>
+          </div>
+          <!-- Изображение еды -->
+          <img src="Image/Food.svg" alt="Еда">
+        </div>
+
+        <!-- Изображение еды, скрытое на определенных устройствах -->
+        <img class="img_none" src="Image/Food.svg" alt="Еда">
+
+        <!-- Контейнер для раздела "руки" -->
+        <div class="container_hand">
+          <!-- Первый блок с изображением и текстом -->
+          <div class="container_hand_1">
+            <img
+              src="Image/Hand_1.svg"
+              alt="Еда, которая сделает тебя лучше!"
+            >
+            <div class="container_hand_1_1">
+              <h2>Еда, которая сделает тебя лучше!</h2>
+              <p>
+                Мы помогаем создавать новое качество жизни для наших клиентов,
+                чтоб каждый<br>
+                человек был счастливым, здоровым и не отвлекался на рутинные
+                процессы.
+                <br>
+                <br>
+                Для этого мы создали новый уникальный продукт на рынке доставки
+                еды и<br>приглашаем вас окунуться в гастрономический шик уже
+                сегодня.
+              </p>
+            </div>
+          </div>
+
+          <!-- Второй блок с изображением и текстом -->
+          <div class="container_hand_2">
+            <div class="container_hand_1_1">
+              <h2>Изысканное меню высокой кухни</h2>
+              <p>
+                В наших блюдах мы продумали каждую деталь, все ингредиенты
+                тщательно<br>
+                подобраны и создают неповторимый вкус.
+                <br>
+                <br>
+                Качественные продукты, деликатесы и суперфуды, которые
+                помогают<br>
+                поддерживать здоровье и обмен веществ. Мы используем
+                крафтовые<br>
+                ингредиенты: с любовью выращиваем микрозелень, делаем соусы и
+                масла,<br>
+                маринуем мясо, рыбу и морепродукты.
+              </p>
+            </div>
+            <img src="Image/Hand_2.svg" alt="Изысканное меню высокой кухни">
+          </div>
+        </div>
+
+        <!-- Контейнер для раздела с подбором рациона -->
+        <div class="container_selection">
+          <h2>Подберите рацион для своих целей</h2>
+
+          <!-- Блок с элементами выбора -->
+          <div class="disp_gr">
+            <p>Пол</p>
+            <div class="dis__none"></div>
+            <div class="dis__none"></div>
+            <div class="dis__none"></div>
+            <div class="dis__none"></div>
+            <div class=""></div>
+            <div class=""></div>
+            <!-- Контейнер для выбора пола -->
+            <div class="contai_sel">
+              <p>Ж</p>
+              <p>М</p>
+            </div>
+
+            <!-- Поля ввода для веса, роста и возраста -->
+            <input type="number" placeholder="Ваш вес" class="one">
+            <input type="number" class="two" placeholder="Ваш рост">
+            <input type="number" class="three" placeholder="Ваш возраст">
+
+            <!-- Выпадающее меню для выбора активности -->
+            <select
+              style="background-color: #faf6f2; cursor: pointer"
+              class="w2"
+            >
+              <option value="Активность" hidden>Активность</option>
+              <option value="Активность">Интенсивная</option>
+              <option value="Активность">Умеренная</option>
+              <option value="Активность">Низкая</option>
+            </select>
+
+            <!-- Выпадающее меню для выбора цели -->
+            <select
+              style="background-color: #faf6f2; cursor: pointer"
+              class="w3"
+            >
+              <option value="Активность" hidden>Выберите цель</option>
+              <option value="Активность">Похудеть</option>
+              <option value="Активность">Набрать</option>
+            </select>
+
+            <!-- Кнопка для расчета рациона -->
+            <button class="calculate" style="cursor: pointer">
+              Рассчитать рацион
+            </button>
+          </div>
+        </div>
+
+        <!-- Контейнер для раздела с программами -->
+        <div class="programm">
+          <!-- Внутренний контейнер для программ -->
+          <div class="programm_cont">
+            <!-- Левый блок с заголовками -->
+            <div class="pr_left">
+              <!-- Заголовок, скрытый на определенных устройствах -->
+              <h2 class="dis_eigh">Программа ПремиумБоул</h2>
+              <!-- Заголовок для мобильных устройств -->
+              <h2 class="dis_eigh_on">Программа питания</h2>
+            </div>
+            <!-- Правый блок с иконкой и текстом -->
+            <div class="pr_right">
+              <img src="Icons/Knife.svg" alt="Нож">
+              <p>Каждый день новое меню</p>
+            </div>
+          </div>
+
+          <!-- Заголовок "Калорийность" -->
+          <p class="programm_cal">Калорийность</p>
+
+          <!-- Сетка для отображения калорийности и количества блюд -->
+          <div class="programm_grid_top">
+            <div class="pr">
+              <p>900 кал</p>
+              <p>3 блюда</p>
+            </div>
+            <div class="pr pr_2">
+              <p>1250 кал</p>
+              <p>4 блюда</p>
+            </div>
+            <div class="pr ggg">
+              <p>1600 кал</p>
+              <p>5 блюд</p>
+            </div>
+            <div class="pr ggg">
+              <p>2 050 кал</p>
+              <p>6 блюд</p>
+            </div>
+            <div class="pr">
+              <p
+                class="pr_last"
+                style="font-size: 24px; font-weight: 600; text-align: center"
+              >
+                индивидуально<br>подобрать
+              </p>
+            </div>
+          </div>
+
+          <!-- Заголовок "Продолжительность" -->
+          <p class="programm_cal">Продолжительность</p>
+
+          <!-- Сетка для отображения продолжительности и стоимости -->
+          <div class="programm_grid_bottom">
+            <div class="pr">
+              <p>Пробные 2 дня</p>
+              <p>за 2 900 ₽</p>
+            </div>
+            <div class="pr">
+              <p>1 неделя</p>
+              <p>1 700 ₽ в день</p>
+            </div>
+            <div class="pr ggg pr_3">
+              <p>2 недели</p>
+              <p>1 600 ₽ в день</p>
+            </div>
+            <div class="pr ggg">
+              <p>3 недели</p>
+              <p>1 520 ₽ в день</p>
+            </div>
+            <div class="pr ggg">
+              <p>4 недели</p>
+              <p>1 450 ₽ в день</p>
+            </div>
+          </div>
+
+          <!-- Блок для выбора дней недели -->
+          <div class="pr_disp">
+            <p>Выберите, сколько дней<br>в неделю вы хотите питаться</p>
+            <div class="fss">
+              <p id="active">5</p>
+              <p>6</p>
+              <p>7</p>
+            </div>
+          </div>
+
+          <!-- Заголовок "Пример дневного рациона" -->
+          <p class="primer">Пример дневного рациона</p>
+
+          <!-- Пример рациона дня -->
+          <p class="primer_p">
+            6 блюд. Калорийность — 1 235 ккал. Белки — 103 г; жиры — 37 г;
+            углеводы — 120 г
+          </p>
+
+          <!-- Кнопки для выбора дня недели -->
+          <div class="buttns">
+            <button class="btns">понедельник</button>
+            <button class="btns">вторник</button>
+            <button class="btns">четверг</button>
+            <button class="btns">пятница</button>
+            <button class="btns">суббота</button>
+            <button class="btns">воскресенье</button>
+          </div>
+
+          <!-- Сетка для отображения блюд -->
+          <div class="menu">
+            <div class="menu_1">
+              <img src="Image/Bludo_1.svg" alt="Завтрак">
+            </div>
+            <div class="menu_2 none_600">
+              <img src="Image/Bludo_2.svg" alt="Обед">
+            </div>
+            <div class="menu_3">
+              <img src="Image/Bludo_3.svg" alt="Полдник">
+            </div>
+            <div class="menu_4">
+              <img src="Image/Bludo_4.svg" alt="Ужин">
+            </div>
+            <div class="menu_5">
+              <pre>Завтрак    230/250 гр</pre>
+              <br>
+              <p>Утренний боул с перепелиным<br>яйцом, киноа и лососем</p>
+            </div>
+            <div class="menu_6 none_600">
+              <pre>Обед   320/30 гр</pre>
+              <br>
+              <p>
+                Боул с куриными фрикадельками в<br>
+                кунжуте, брокколи и миндальным<br>
+                соусом
+              </p>
+            </div>
+            <div class="menu_7">
+              <pre>Полдник    50/30 гр</pre>
+              <br>
+              <p>
+                Кукурузные блинчики с кокосовым<br>припеком и фруктовым
+                тар-таром
+              </p>
+            </div>
+            <div class="menu_8">
+              <pre>Ужин   100/100 гр</pre>
+              <br>
+              <p>Морепродукты в соусе Гарсия со<br>стручковой фасолью</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Нижний блок для заказа и информации о доставке -->
+        <div class="programm_footer">
+          <!-- Левый блок с кнопкой заказа и информацией о стоимости -->
+          <div class="foot_left">
+            <button style="cursor: pointer">
+              Заказать 10 дней питания за 16 000 ₽
+            </button>
+            <p>1 250 ккал за 1 600 ₽ в день</p>
+          </div>
+          <!-- Правый блок с иконкой и текстом о доставке -->
+          <div class="foot_right">
+            <img src="Icons/foot.svg" alt="Сервис">
+            <div class="disp_col">
+              <p>Будем доставлять наборы каждый день.</p>
+              <p>
+                Доставка осуществляется каждый день с 06:00 до 12:00. Выбор
+                интервала — 2 часа.<br>
+                Заявки принимаются не позднее, чем за день до предполагаемой
+                доставки.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Раздел "О нашем сервисе" -->
+        <div class="about">
+          <h2>О нашем сервисе</h2>
+
+          <!-- Контейнер для информации о сервисе -->
+          <div class="container_about">
+            <!-- Первый блок с изображением и текстом -->
+            <div class="block_1 qq">
+              <img src="Image/about_1.svg" alt="Деликатные">
+              <h3>
+                Мы используем деликатные<br>
+                технологии приготовления блюд
+              </h3>
+              <p>
+                Сухой гриль без прямого контакта продукта<br>
+                с жарочной поверхностью, запекание, су-вид
+              </p>
+            </div>
+            <!-- Второй блок с изображением и текстом -->
+            <div class="block_2 qq">
+              <img src="Image/about_2.svg" alt="Меню">
+              <h3>
+                Меню из 90 блюд на две недели<br>
+                без повтора
+              </h3>
+              <p>
+                Сбалансированные блюда, содержащие в себе<br>
+                все необходимые элементы за счёт большого<br>
+                количества компонентов
+              </p>
+            </div>
+            <!-- Третий блок с изображением и текстом -->
+            <div class="block_3 qq">
+              <img src="Image/about_3.svg" alt="Здоровые">
+              <h3>Здоровые рецепты</h3>
+              <p>
+                Без молочки, белой муки, сахара, консервантов,<br>
+                усилителей вкуса и глубокой прожарки. А также<br>
+                мы используем сыродавленные масла<br>
+                собственного производства
+              </p>
+            </div>
+            <!-- Четвертый блок с изображением и текстом -->
+            <div class="block_4 qq">
+              <img src="Image/about_4.svg" alt="Гарантия">
+              <h3>Гарантия возврата</h3>
+              <p>
+                100%-ная гарантия возврата денежных средств<br>
+                за предоплаченные дни, если что-то не<br>
+                понравилось в течение первой недели
+              </p>
+            </div>
+            <!-- Пятый блок с изображением и текстом -->
+            <div class="block_5 qq">
+              <img src="Image/about_5.svg" alt="Контроль">
+              <h3>Контроль температуры</h3>
+              <p>
+                Все курьеры оснащены сумками-холодильниками,<br>
+                что позволяет сохранять температурный режим<br>
+                от 2°C до 4°C от кухни до ваших рук
+              </p>
+            </div>
+            <!-- Шестой блок с изображением и текстом -->
+            <div class="block_6 qq">
+              <img src="Image/about_6.svg" alt="Забота">
+              <h3>Забота о природе</h3>
+              <p>
+                Все блюда доставляем в экоупаковке из<br>
+                крафтового картона со столовыми приборами<br>
+                из кукурузного крахмала
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Раздел "Попробуйте новый формат рационов" -->
+        <div class="taste">
+          <!-- Левый контейнер с текстом -->
+          <div class="left_cont">
+            <h3>
+              Попробуйте новый формат рационов — Боулы!<br>
+              Это богатый набор полезных веществ и масса вкусовых<br>
+              впечатлений!
+            </h3>
+            <p>
+              Боулы — это сбалансированный вариант блюда, содержащего в себе все
+              необходимые<br>
+              элементы за счёт большого количества компонентов. Ингредиенты
+              блюда не<br>
+              смешиваются между собой, а не спеша поедаются по отдельности.
+              <br><br>
+              Мы готовим полноценное здоровое питание на день и ежедневно
+              доставляем утром к<br>
+              вашим дверям.
+              <br><br>
+              Наш сервис помогает экономить время, поддерживать стройность,<br>
+              работоспособность и укреплять здоровье.
+            </p>
+          </div>
+          <!-- Правый контейнер с слайдером изображений -->
+          <div class="right_cont slider">
+            <!-- Кнопка для предыдущего изображения -->
+            <button
+              class="prev-button"
+              style="border: none; background-color: #faf6f200"
+            >
+              <img
+                src="Icons/arrowLeft.svg"
+                alt="Назад"
+                style="cursor: pointer"
+              >
+            </button>
+            <!-- Изображение слайда -->
+            <img id="slider-image" src="Image/Taste1.svg" alt="Боул">
+            <!-- Кнопка для следующего изображения -->
+            <button
+              class="next-button"
+              style="border: none; background-color: #faf6f200"
+            >
+              <img
+                src="Icons/arrowRight.svg"
+                alt="Вперёд"
+                style="cursor: pointer"
+              >
+            </button>
+          </div>
+        </div>
+
+        <!-- Раздел с 3D каруселью -->
+        <div id="carousel">
+          <div id="drag-container">
+            <div id="spin-container">
+              <!-- Ссылки с изображениями для карусели -->
+              <a href="/photo-large.jpg"
+                ><img src="Image/Bludo_1.svg" alt="Фото"
+              ></a>
+              <a href="/photo-large.jpg"
+                ><img src="Image/Bludo_2.svg" alt="Фото"
+              ></a>
+              <a href="/photo-large.jpg"
+                ><img src="Image/Bludo_3.svg" alt="Фото"
+              ></a>
+              <a href="/photo-large.jpg"
+                ><img src="Image/Bludo_4.svg" alt="Фото"
+              ></a>
+              <p>3D Карусель</p>
+            </div>
+            <div id="ground"></div>
+          </div>
+        </div>
+
+        <!-- Раздел "Карта доставки" -->
+        <div class="map">
+          <h2>Карта доставки</h2>
+          <p>
+            Доставка осуществляется каждый день с 06:00 до 12:00.<br>
+            Выбор интервала — 2 часа.
+          </p>
+          <div class="cont_fl">
+            <!-- Встраивание карты Google Maps -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3736.172977362518!2d23.828070132174616!3d53.66783378091775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e0787fc12fca93%3A0x67f751398e60de7a!2z0KPRh9GA0LXQttC00LXQvdC40LUg0L7QsdGA0LDQt9C-0LLQsNC90LjRjyAi0JPRgNC-0LTQvdC10L3RgdC60LjQuSDQs9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0L_QvtC70LjRgtC10YXQvdC40YfQtdGB0LrQuNC5INC60L7Qu9C70LXQtNC2Ig!5e0!3m2!1sru!2sby!4v1717929439716!5m2!1sru!2sby"
+              width="800"
+              height="600"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <!-- Контейнер с навигационными кнопками и контактной информацией -->
+            <div class="cont_map_nav">
+              <button id="free" style="cursor: pointer">
+                По городу бесплатно
+              </button>
+              <button id="one" style="cursor: pointer">
+                Пригород 25 км — 100 ₽
+              </button>
+              <button id="three" style="cursor: pointer">
+                Пригород 35 км — 300 ₽
+              </button>
+              <button id="fift" style="cursor: pointer">
+                Пригород 50 км — 500 ₽
+              </button>
+              <p>Уточните стоимость и время доставки</p>
+              <h3>+7 988 500-1-700</h3>
+              <p>c 09:00 до 21:00</p>
+              <button id="call_me" style="cursor: pointer">
+                Перезвоните мне
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Форма с часто задаваемыми вопросами -->
+        <form>
+          <div class="FAQ">
+            <h2>Частые вопросы</h2>
+            <div class="cont_faq">
+              <button style="cursor: pointer">Продукты</button>
+              <button style="cursor: pointer">Программы</button>
+              <button style="cursor: pointer" class="thr frst">
+                Оплата и доставка
+              </button>
+              <button style="cursor: pointer" class="thr">Хранение</button>
+            </div>
+            <div class="cont_faq_col">
+              <select style="cursor: pointer">
+                <option>Как я могу оплатить заказ</option>
+              </select>
+
+              <div class="together">
+                <select id="faq_two" style="cursor: pointer">
+                  <option>Могу ли я изменить адрес и время доставки?</option>
+                </select>
+                <p>
+                  Каждый вечер, в день доставки, с вами связывается курьер,
+                  ориентировочно с 19:00 до 20:00 для уточнения адреса и времени
+                  доставки.<br>
+                  При необходимости, вы можете их изменить, сообщив об этом
+                  курьеру при звонке.
+                </p>
+              </div>
+
+              <select style="cursor: pointer">
+                <option>Могу ли я перенести день доставки?</option>
+              </select>
+
+              <select style="cursor: pointer" class="dssp_none">
+                <option>
+                  Могу ли я приостановить доставку, на какой срок?
+                </option>
+              </select>
+            </div>
+          </div>
+        </form>
+
+        <!-- Раздел "Бесплатная консультация диетолога" -->
+        <div class="freeConsultation">
+          <div class="container_freeConsultation">
+            <h2>Бесплатная консультация<br>диетолога</h2>
+            <input type="text" id="name" placeholder="Ваше имя">
+            <input type="tel" id="number" placeholder="Телефон"><br>
+            <button style="cursor: pointer" class="nuna">
+              Отправить заявку
+            </button>
+
+            <!-- Информация о нутрициологе -->
+            <div class="dadada">
+              <img src="Icons/Insta.svg" alt="Инстаграмм">
+              <p>
+                Нутрициолог Вероника<br>
+                vnk_fitness
+              </p>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+              <div class="star"></div>
+            </div>
+          </div>
+          <img src="Image/Telephone.png" alt="Телефон" class="img_tel">
+        </div>
+
+        <!-- Раздел "Пробный рацион" -->
+        <div class="trialDiet">
+          <h2>Пробный рацион</h2>
+          <p>
+            Сомневаетесь? Протестируйте наш сервис и еду.<br>
+            Начните с пробного меню на два дня со скидкой 20% за 2 800 ₽ (1 200
+            ккал)
+          </p>
+          <button class="heighh" style="cursor: pointer">Попробовать</button>
+
+          <!-- Раздел "Будьте всегда в курсе!" -->
+          <div class="stayInformed">
+            <div class="stayInformed_left">
+              <h2>Будьте всегда в курсе!</h2>
+              <div class="dadadada">
+                <img src="Icons/Email.svg" alt="Email">
+                <p>
+                  Подпишитесь на рассылку и будьте всегда в курсе новинок, акций
+                  и новостей!
+                </p>
+              </div>
+            </div>
+
+            <!-- Поле ввода для подписки на рассылку -->
+            <div class="stayInformed_right">
+              <input type="email" id="email" placeholder="Укажите вашу почту">
+              <button style="cursor: pointer">Подписаться</button>
+            </div>
+          </div>
+        </div>
+      
+      <!-- Раздел "Футер" -->
+        <footer>
+        <div class="container_footer">
+          <div class="footer_left">
+            <!-- Контактная информация -->
+            <div class="disp_1">
+              <h2>+7 988 500-1-700</h2>
+              <h2>hello@pora-poest.com</h2>
+            </div>
+            <p class="light">Ежедневно c 09:00 до 21:00</p>
+            <p class="ttt">
+              ООО «ПораПоесть», г. Краснодар, ул. Кубанская Набережная улица,
+              дом 5, офис 4
+            </p>
+            <br><br>
+            <!-- Авторские права и условия -->
+            <p class="ttt">
+              © 2021 ПораПоесть — сервис доставки прогрессивного питания.
+            </p>
+            <p class="last">
+              Фотографии блюд на сайте являются вариантом сервировки блюда.
+              Внешний вид блюда может отличаться от фотографии на сайте.
+              <br>
+              Указывая электронную почту и номер телефона на сайте, вы
+              соглашаетесь с условиями
+              <span class="green">Публичной оферты</span> и
+              <span class="green">Политикой конфиденциальности</span>
+            </p>
+          </div>
+          <div class="footer_right">
+            <!-- Социальные сети -->
+            <div class="top">
+              <img
+                src="Icons/Instafooter.svg"
+                alt="Instagram"
+                style="cursor: pointer"
+              >
+              <img
+                src="Icons/Instafooter.svg"
+                alt="Instagram"
+                style="cursor: pointer"
+              >
+              <img
+                src="Icons/Instafooter.svg"
+                alt="Instagram"
+                style="cursor: pointer"
+              >
+            </div>
+            <!-- Способы оплаты -->
+            <div class="bottom">
+              <img
+                src="Icons/Pay.svg"
+                alt="Payment Methods"
+                style="cursor: pointer"
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+      </main>
+    </div>
+    <!-- Подключение jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Подключение пользовательских скриптов -->
+    <script src="Script/Okna_1.js"></script>
+    <script src="Script/Slider_4.js"></script>
+    <script src="Script/Karusel_5.js"></script>
+    <script src="Script/Animate_7.js"></script>
+    <script src="Script/Href_9.js"></script>
+    <script src="Script/OnTop_6.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </body>
+</html>

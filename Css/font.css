@@ -1,0 +1,14 @@
+/* Устанавливаем шрифт и жирность для следующих элементов: */
+p,
+a,
+h1,
+h2,
+h3,
+button,
+select,
+input,
+nav,
+pre {
+  font-family: "Manrope", Arial, sans-serif;
+  font-weight: 900;
+}
